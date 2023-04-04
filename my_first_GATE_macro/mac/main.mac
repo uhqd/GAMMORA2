@@ -1,0 +1,238 @@
+# ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° 
+#
+# Your very first GATE macro using gaga sources. 
+# GAMMORA creates this kind of macro for a Truebeam linac.
+# This is a simple example of use of a gaga photon phase space (TrueBeam X10 FFF)
+# There is no gantry elements in this macro, only a very simple example of a GATE macro 
+# to understand the use of our pretrained GAN gaga-phsp as a source of photons in GATE. 
+# See comments to learn the role of each part. For more details on GATE commands see the 
+# Gate website : http://www.opengatecollaboration.org/
+# 
+# Reference of gaga :
+# Generative adversarial networks (GAN) for compact beam source modelling in Monte Carlo simulations
+# Sarrut et al. PMB 2019 64(21)
+# ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °  
+
+
+#   Use: Gate --qt mac/main/mac
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 					INTRODUCTION
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+# Set the verbosity
+/control/execute mac/verbose.mac
+
+# Set the visualization parameters
+/control/execute mac/visu.mac
+
+# Set the path to the materials database
+/gate/geometry/setMaterialDatabase data/Materials.db
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 					GEOMETRY
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+#  Creation of world (mandatory): a 5x5x5 m3 box of air
+#
+/gate/world/setMaterial Air
+/gate/world/geometry/setXLength 5.0 m
+/gate/world/geometry/setYLength 5.0 m
+/gate/world/geometry/setZLength 5.0 m
+/gate/world/vis/setVisible 0
+
+
+#  Creation of an object called "patient", daughter of world
+#  Patient is made of two cylinders composed of water and lung tissue
+#
+/gate/world/daughters/name patient
+/gate/world/daughters/insert cylinder
+/gate/patient/geometry/setRmax 150 mm
+/gate/patient/geometry/setHeight 400 mm
+/gate/patient/setMaterial Water
+/gate/patient/daughters/name lung
+/gate/patient/daughters/insert cylinder
+/gate/lung/geometry/setRmax 130 mm
+/gate/lung/geometry/setHeight 400 mm
+/gate/lung/setMaterial DIBHLung
+/gate/lung/daughters/name ptv
+/gate/lung/daughters/insert sphere
+/gate/ptv/geometry/setRmax 15 mm
+/gate/ptv/setMaterial Water
+/gate/patient/vis/setColor blue
+/gate/patient/vis/forceSolid
+/gate/patient/vis/setVisible 1
+/gate/lung/vis/setColor red
+/gate/lung/vis/forceSolid
+/gate/lung/vis/setVisible 1
+/gate/ptv/vis/setColor green
+/gate/ptv/vis/forceSolid
+/gate/ptv/vis/setVisible 1
+
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 				 SOURCE
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+# Creation of a pseudo gantry
+# myLinac is a box of air that is able to rotate.around the patient
+# myLinacHead is a daughter of myLinac (air) that is able to
+# rotate around the beam axis
+# Position of myLinac at each "run" is define in 
+#  data/gantryMovement.placements
+#
+/gate/world/daughters/name mylinac
+/gate/world/daughters/insert box
+/gate/mylinac/setMaterial Air
+/gate/mylinac/geometry/setXLength 2.2 m  
+/gate/mylinac/geometry/setYLength 1.25 m
+/gate/mylinac/geometry/setZLength 2.2 m
+/gate/mylinac/placement/setRotationAxis 0 0 1 
+/gate/mylinac/vis/setColor red
+/gate/mylinac/vis/setVisible 0
+/gate/mylinac/moves/insert genericMove
+/gate/mylinac/genericMove/setPlacementsFilename data/gantryMovement.placements
+/gate/mylinac/daughters/name myLinacHead
+/gate/mylinac/daughters/insert box
+/gate/myLinacHead/setMaterial Air
+/gate/myLinacHead/geometry/setXLength 1.5 m  
+/gate/myLinacHead/geometry/setYLength 1.2 m
+/gate/myLinacHead/geometry/setZLength 1.5 m
+/gate/myLinacHead/placement/setRotationAxis 0 1 0 
+/gate/myLinacHead/placement/setRotationAngle 180.000 deg
+/gate/myLinacHead/vis/setColor green
+/gate/myLinacHead/vis/setVisible 0
+
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 				PLANES FOR INPUT PHASE SPACE FILES
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#
+#  Create an object to attach the phsp files.
+#  A thin box of air in myLinacHead
+# 
+/gate/myLinacHead/daughters/name inPhSpVarian
+/gate/myLinacHead/daughters/insert box
+/gate/inPhSpVarian/setMaterial Air
+/gate/inPhSpVarian/geometry/setXLength 0.15 m  
+/gate/inPhSpVarian/geometry/setYLength 0.15 m
+/gate/inPhSpVarian/geometry/setZLength 0.001 m
+/gate/inPhSpVarian/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/inPhSpVarian/vis/setVisible 0
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 				OUTPUT
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#
+#
+# Define a first GATE output file and path: a simple particle counter
+#
+/gate/actor/addActor SimulationStatisticActor myCounter 
+/gate/actor/myCounter/save output/counter.txt
+/gate/actor/myCounter/saveEveryNSeconds     2
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 				PHYSICS
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#
+# Define a simple physics list
+#
+/gate/physics/addPhysicsList emlivermore
+/gate/physics/Gamma/SetCutInRegion      world 1 mm
+/gate/physics/Electron/SetCutInRegion   world 1 mm
+/gate/physics/Positron/SetCutInRegion   world 1 mm
+
+
+
+
+
+
+#=====================================================
+# INITIALISATION
+#=====================================================
+
+
+/gate/run/initialize
+
+
+#=====================================================
+# GAGA INPUT BEAM
+#=====================================================
+
+
+
+# Use a pretrained GAN particle generator (gaga-phsp). 
+
+#  Create a source called Mybeam. Type of source: phase space 
+#
+/gate/source/addSource MyBeam phaseSpace
+
+# Get the .pt file that is a pretrained GAN of the 10FFF beam of the truebeam
+#
+/gate/source/MyBeam/addPhaseSpaceFile data/gaga/10FFF.pt
+
+# You need to define the type of particles: gamma
+#
+/gate/source/MyBeam/setParticleType gamma
+
+# path to .json file (Pytorch parameters)
+#
+/gate/source/MyBeam/setPytorchParams data/gaga/10FFF.json
+#/gate/source/MyBeam/setPytorchBatchSize 1000000
+/gate/source/MyBeam/setPytorchBatchSize 1
+
+# The source must be attached to an object previously created. 
+#
+/gate/source/MyBeam/attachTo inPhSpVarian
+
+
+# Every photon has the same weight
+#
+/gate/source/MyBeam/ignoreWeight true
+
+#=====================================================
+# Uncomment to use a IAEAphsp file instead
+#
+#/gate/source/addSource MyBeam phaseSpace
+#/gate/source/MyBeam/addPhaseSpaceFile data/1000p.IAEAphsp
+#/gate/source/MyBeam/attachTo inPhSpVarian
+#=====================================================
+
+
+
+#=====================================================
+# START BEAMS
+#=====================================================
+
+# Select a random number engine
+#
+/gate/random/setEngineName MersenneTwister
+
+# Select a random seed
+#
+/gate/random/setEngineSeed auto
+
+# Set the path to the time slices definition
+#
+/control/execute mac/timeslices.mac
+
+# Set the number of primaries for each run (read in a file)
+/gate/application/readNumberOfPrimariesInAFile data/primary.dat
+
+# Congratulations, you can start. 
+#
+/gate/application/start
+/gate/application/describe
+
+
+
+
