@@ -1,0 +1,202 @@
+
+# ****************************************************
+#
+#     GAMMORA project
+#     Inserm CRCT (UMR1037)
+#
+# ****************************************************
+#
+# This configuration file allows to choose the parameters 
+# of the generated GATE macro of a VARIAN TrueBeam
+# 
+# Set ALL parameters in the lines following the tags =TAG= 
+# Only the line following the =TAG= is read
+# auto is a default value, see these values in: 
+# Gammora_manual_beam.py for 'manual study type'
+# Gammora_patient_beam.py for 'patient study type'
+# 
+# See GAMMORA User Guide for help  
+
+
+#----------------------------------------------------------------------------------------------------
+#                                                  GENERAL
+#----------------------------------------------------------------------------------------------------
+
+# Simulation Name
+# Set your job name prefix: string or "auto" (if auto, simulation name will be the study name)
+=SIMULATION_NAME=
+waterTk
+
+# Visualization. Choose between:
+# 0 = no ; 1 = yes ; 2 : yes with MLC view ; "auto"
+=VISU=
+1
+
+# Physics list. Choose: 
+# 0 = no physics list inserted in the macros
+# 1 = default physics list /utils/mac/mac_template/Xphysics.macX
+# "auto" 
+#  your own physics list <myPhysicsList>.mac  (must be in /utils/mac/mac_template/)
+=PHYSICS=
+auto
+
+# Head simulation 
+# Enable creation of macros for the head part   0 = no ; 1 = yes ;  "auto"
+=HEAD_SIMULATION=
+auto
+
+# EEnable creation of macros for the patient part 0 = no ; 1 = yes ;  "auto"
+=PATIENT_SIMULATION=
+auto
+
+# Index: Number of splitted jobs or "auto"  (depends on SPLIT_TYPE)
+# 1 : no splitting (one job)
+=INDEX=
+1
+
+# Splitting type: Set "auto" or "stat" or "dyn" (see documentation for the splitting type, recommanded: dyn)
+=SPLIT_TYPE=
+stat
+
+# IGNORE THIS TAG (Work in progress)
+# test bool 0 = no ; 1 = yes ;  "auto" (not working yet)
+=TEST_SIMULATION=
+auto
+
+#----------------------------------------------------------------------------------------------------
+#                                                  GEOMETRY
+#----------------------------------------------------------------------------------------------------
+
+# This section is ignored in 'patient study type'. Set auto for all tags.  
+# This section is also ignored if HEAD SIMULATION tag is disabled 
+# For 'manual study type' fill the following tags. 
+
+# Set Gantry angle (float in deg). For arcs, set start angle [0 - 360] ; auto 
+=GANTRY=
+0
+
+# Gantry stop: choose X for static field. 
+# For arcs, set the stop angle (float value in deg)  [0 - 360] ; auto
+=GANTRY_STOP=
+X
+
+# Set rotation direction for arcs. 0 clockwise. 1 counter clockwise ; auto
+# Tag without consequences on the results except if the target moves
+=ROTATION_DIRECTION=
+0
+
+# Set Collimator angle (float in deg) ; auto 
+=COLLI=
+45
+
+# X1 jaw opening (float in mm). Must be < 210 ; auto 
+=X1=
+100
+
+# X2 jaw opening (float in mm). Must be < 210 ; auto 
+=X2=
+100
+
+# Y1 jaw opening (float in mm). Must be < 210 ; auto 
+=Y1=
+100
+
+# Y2 jaw opening (float in mm). Must be < 210 ; auto 
+=Y2=
+100
+
+# MLC: 
+# 0 = no mlc 
+# Set auto in 'patient study type' to use MLC leaves position from the DICOM RT plan
+# Under construction for manual mode : 1 
+=MLC=
+0
+
+# Set 0 = no mlc
+# Set auto for 'patient study type' to use MLC leaves position from the DICOM RT plan
+# Under construction for manual mode: "myownMLCposition.mlc" file, must be in /utils/mlc
+=MLC_FILE=
+0
+
+# Phantom or patient. 
+# Set 0 = no phantom/patient 
+# Set auto to use a CT in 'patient study type' 
+# In 'manual study type' only: your own phantom file <myPhantom>.mac > (must be in utils/mac/phantom/)  
+# Ex. : waterBox800.mac
+# Under construction for 'manual study type', the use of a CT: "myownCT.mhd" file
+=PHANTOM=
+waterbox300.mac
+#auto
+#phantom_interplay.mac
+
+
+#----------------------------------------------------------------------------------------------------
+#                                                  ACTOR
+#----------------------------------------------------------------------------------------------------
+
+# PHSP ACTOR is to store output particles from the HEAD SIMULATION 
+# Set 0 = no phsp actor 
+# auto or 1 = default phsp actor: utils/mac/actor/iaea_make_phspR_cyl.mac 
+# for your own actor definition  <my_actor>.mac" (file must be in utils/mac/actor/) 
+=PHSP_ACTOR=
+auto
+
+# PATIENT ACTOR is to store results from the PATIENT SIMULATION 
+# Set 0 = no patient actor 
+# auto or 1 = default patient actor:  utils/mac/actor/dose_actor.mac
+# for your own actor definition  <my_actor>.mac" (file must be in utils/mac/actor/) 
+=PATIENT_ACTOR=
+auto
+#dose_actor.mac
+#dose_actor_octa_thin.mac
+#dose_actor_octa.mac
+#dose_abs_photon2.mac
+#201711674_actor.mac
+
+# Patient actor size (only for default patient actor; ignored if an actor file is used)
+# Set "auto" or set x y z (mm) (must be float)
+# ex: 300.0 125.0 425.0 
+=PATIENT_ACTOR_SIZE=
+auto
+
+# Patient actor resolution  (only for default patient actor; ignored if an actor file is used)
+# Set "auto" or set x y z (voxels) (must be int)
+# ex: 300 150 450
+=PATIENT_ACTOR_RESOLUTION=
+auto
+
+
+#----------------------------------------------------------------------------------------------------
+#                                                  SOURCE
+#----------------------------------------------------------------------------------------------------
+
+# Set 0 = no source ; "auto" ; "iaea" (Varian-phsp file) ; "gaga" ; 
+# sources are in utils/source/
+# if the user has access to myVarian IAEAphsp v2 files, place them in /utils/source/ 
+=SOURCE=
+gaga
+
+# Set "auto" ; "6X" ; "10X"; "6FFF" ; "10FFF"
+=ENERGY=
+6X
+
+# Set "auto" or total number of native particles to simulate 
+=NB_PART=
+20000
+
+# Set "auto" or recycling value (positive int)
+# Set the number of recyling for patient simulation
+=RECYCILNG=
+50
+
+#----------------------------------------------------------------------------------------------------
+#                                                  COMPUTING
+#---------------------------------------------------------------------------------------------------
+
+# EXECUTE ON CLUSTER
+# 0 : local simulations
+# 3 : create SLURM script for super computers
+=EXECUTE_ON_CLUSTER=
+0
+
+
