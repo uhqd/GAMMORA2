@@ -1,0 +1,8 @@
+#								   ---  GEOMETRY  ---
+
+# WORLD 5x5x5 m3
+/gate/world/setMaterial Air
+/gate/world/geometry/setXLength 5.0 m
+/gate/world/geometry/setYLength 5.0 m
+/gate/world/geometry/setZLength 5.0 m
+/gate/world/vis/setVisible 0

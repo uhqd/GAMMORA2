@@ -1,0 +1,21 @@
+# Output in a IAEAphsp file after MLC
+# Attach to "outPhSpMLCyl"
+/gate/actor/addActor PhaseSpaceActor IAEAPhaseSpaceCyl
+/gate/actor/IAEAPhaseSpaceCyl/save {out}/myIAEA.root
+/gate/actor/IAEAPhaseSpaceCyl/attachTo outPhSpCylinder
+/gate/actor/IAEAPhaseSpaceCyl/enableEkine true
+/gate/actor/IAEAPhaseSpaceCyl/enableXPosition true
+/gate/actor/IAEAPhaseSpaceCyl/enableYPosition true
+/gate/actor/IAEAPhaseSpaceCyl/enableZPosition true
+/gate/actor/IAEAPhaseSpaceCyl/enableXDirection true
+/gate/actor/IAEAPhaseSpaceCyl/enableYDirection true
+/gate/actor/IAEAPhaseSpaceCyl/enableZDirection true
+/gate/actor/IAEAPhaseSpaceCyl/enableProductionVolume false
+/gate/actor/IAEAPhaseSpaceCyl/enableProductionProcess false
+/gate/actor/IAEAPhaseSpaceCyl/enableParticleName true
+/gate/actor/IAEAPhaseSpaceCyl/enableWeight true
+# Store coordinates in the actor coordinates
+/gate/actor/IAEAPhaseSpaceCyl/useVolumeFrame true
+# Warning : set this line to true make the particles generated twice
+# when the output file is used as an input
+/gate/actor/IAEAPhaseSpaceCyl/storeSecondaries false

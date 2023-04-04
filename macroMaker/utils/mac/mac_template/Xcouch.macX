@@ -1,0 +1,18 @@
+/gate/world/daughters/name couch_ext
+/gate/world/daughters/insert tessellated
+/gate/couch_ext/geometry/setPathToSTLFile data/couch_ext.stl
+/gate/couch_ext/setMaterial Graphite_couch
+/gate/couch_ext/vis/setVisible 1
+/gate/couch_ext/vis/forceWireframe
+/gate/couch_ext/vis/setColor magenta
+/gate/couch_ext/placement/setTranslation x_shift y_shift z_shift mm
+/gate/couch_ext/placement/setRotationAxis 0 0 1
+/gate/couch_ext/placement/setRotationAngle 180.0 deg
+
+/gate/couch_ext/daughters/name couch_int
+/gate/couch_ext/daughters/insert tessellated
+/gate/couch_int/geometry/setPathToSTLFile data/couch_int.stl
+/gate/couch_int/vis/setVisible 1
+/gate/couch_int/setMaterial Rohacell51
+/gate/couch_int/vis/forceWireframe
+/gate/couch_int/vis/setColor green

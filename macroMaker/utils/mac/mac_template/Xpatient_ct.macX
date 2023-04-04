@@ -1,0 +1,26 @@
+#-------------------------------------------------------------------------------------------#
+#										 PATIENT.MAC 
+#-------------------------------------------------------------------------------------------#
+
+#Set Materials Values for CT 
+
+# Generate materials from Hounsfield units
+
+/gate/HounsfieldMaterialGenerator/SetMaterialTable                  DATA_DIR/Schneider2000MaterialsTable.txt
+/gate/HounsfieldMaterialGenerator/SetDensityTable                   DATA_DIR/iuc_DensitiesTables.txt
+/gate/HounsfieldMaterialGenerator/SetDensityTolerance               0.1 g/cm3
+/gate/HounsfieldMaterialGenerator/SetOutputMaterialDatabaseFilename DATA_DIR/patient-HUmaterials.db
+/gate/HounsfieldMaterialGenerator/SetOutputHUMaterialFilename       DATA_DIR/patient-HU2mat.txt
+/gate/HounsfieldMaterialGenerator/Generate
+
+/gate/world/daughters/name patient
+/gate/world/daughters/insert ImageNestedParametrisedVolume
+
+/gate/geometry/setMaterialDatabase              DATA_DIR/patient-HUmaterials.db
+/gate/patient/geometry/setHUToMaterialFile      DATA_DIR/patient-HU2mat.txt
+/gate/patient/geometry/setImage                 PATIENT_CT
+
+#/gate/patient/placement/setRotationAxis 1 0 0
+#/gate/patient/placement/setRotationAngle 180 deg
+
+/gate/patient/geometry/TranslateTheImageAtThisIsoCenter isox isoy isoz mm  

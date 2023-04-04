@@ -1,0 +1,14 @@
+
+#               CLINICAL CYLINDER FOR ARC THERAPY
+# A cylinder of 0.01 mm thickness of Air located after the MLC surrounding the phantom
+# One Clinical Cylinder store particules of an arc therapy no matter gantry angle
+
+/gate/world/daughters/name outPhSpCylinder
+/gate/world/daughters/insert cylinder
+/gate/outPhSpCylinder/setMaterial Air
+/gate/outPhSpCylinder/geometry/setRmin 369.9  mm
+/gate/outPhSpCylinder/geometry/setRmax 370 mm
+/gate/outPhSpCylinder/geometry/setHeight 1400 mm
+/gate/outPhSpCylinder/vis/setColor red
+/gate/outPhSpCylinder/vis/forceWireframe
+/gate/outPhSpCylinder/vis/setVisible 1

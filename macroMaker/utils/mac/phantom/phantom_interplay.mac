@@ -1,0 +1,67 @@
+# phantom interplay
+
+
+
+
+/gate/world/daughters/name patient
+/gate/world/daughters/insert cylinder
+/gate/patient/setMaterial G4_WATER
+/gate/patient/geometry/setRmin 0.0 mm
+/gate/patient/geometry/setRmax 160 mm
+/gate/patient/geometry/setHeight 200 mm
+/gate/patient/vis/setColor green
+/gate/patient/vis/forceWireframe
+/gate/patient/vis/setVisible 1
+
+
+#/gate/patient/placement/setTranslation 0.0 0.0 0.0 mm
+
+# 2cm to employ region dependent cutoff as mentioned by Benmakhlouf et al
+# ---------------------------------------
+#/gate/patient/daughters/name GTV
+#/gate/patient/daughters/insert sphere
+#/gate/GTV/setMaterial G4_WATER
+#/gate/GTV/placement/setTranslation 0.0 100.0 0.0 mm
+#/gate/GTV/geometry/setRmin 0.0 mm
+#/gate/GTV/geometry/setRmax 10.0 mm
+#/gate/GTV/vis/setColor yellow
+#/gate/GTV/vis/forceWireframe
+#/gate/GTV/vis/setVisible 1
+
+
+#/gate/patient/daughters/name OAR1
+#/gate/patient/daughters/insert sphere
+#/gate/OAR1/setMaterial G4_WATER
+#/gate/OAR1/placement/setTranslation 47.9 0.8 0.0 mm
+#/gate/OAR1/geometry/setRmin 0.0 mm
+#/gate/OAR1/geometry/setRmax 20.0 mm
+#/gate/OAR1/vis/setColor magenta
+#/gate/OAR1/vis/forceWireframe
+#/gate/OAR1/vis/setVisible 1
+
+
+#/gate/patient/daughters/name OAR2
+#/gate/patient/daughters/insert sphere
+#/gate/OAR2/setMaterial G4_WATER
+#/gate/OAR2/placement/setTranslation 0.5 0.1 -41.1 mm
+#/gate/OAR2/geometry/setRmin 0.0 mm
+#/gate/OAR2/geometry/setRmax 20.0 mm
+#/gate/OAR2/vis/setColor blue
+#/gate/OAR2/vis/forceWireframe
+#/gate/OAR2/vis/setVisible 1
+
+
+#/gate/patient/daughters/name OAR3
+#/gate/patient/daughters/insert sphere
+#/gate/OAR3/setMaterial G4_WATER
+#/gate/OAR3/placement/setTranslation 0.5 -38.5 25.2 mm
+#/gate/OAR3/geometry/setRmin 0.0 mm
+#/gate/OAR3/geometry/setRmax 20.0 mm
+#/gate/OAR3/vis/setColor red
+#/gate/OAR3/vis/forceWireframe
+#/gate/OAR3/vis/setVisible 1
+
+#/gate/patient/moves/insert genericMove
+#/gate/patient/genericMove/setPlacementsFilename data/phantom_motion.placements
+
+

@@ -1,0 +1,33 @@
+# ---------------------------------------
+# Water Tank 300x300x300
+# To calculate D_ref_Gate (Gy/part) fr absolute dose scaling 
+# ---------------------------------------
+
+/gate/world/daughters/name patient
+/gate/world/daughters/insert box
+
+/gate/patient/setMaterial G4_WATER
+/gate/patient/placement/setTranslation 0.0 -150.0 0.0 mm
+/gate/patient/geometry/setXLength 300.0 mm
+/gate/patient/geometry/setYLength 300.0 mm
+/gate/patient/geometry/setZLength 300.0 mm
+/gate/patient/vis/setColor blue
+/gate/patient/vis/forceWireframe
+
+# ---------------------------------------
+# Watervoxel
+# ---------------------------------------
+/gate/patient/daughters/name WaterVoxel
+/gate/patient/daughters/insert box
+/gate/WaterVoxel/setMaterial G4_WATER
+/gate/WaterVoxel/geometry/setXLength 1.25 mm
+/gate/WaterVoxel/geometry/setYLength 1.25 mm
+/gate/WaterVoxel/geometry/setZLength 1.25 mm 
+
+/gate/WaterVoxel/placement/setTranslation 0.0 100 0.0 mm
+
+
+/gate/WaterVoxel/vis/forceSolid
+/gate/WaterVoxel/vis/setColor red
+/gate/WaterVoxel/vis/setVisible 1
+

@@ -1,0 +1,69 @@
+
+
+# PHASE SPACE PLANE FOR FILES PRODUCED BY A PREVIOUS GATE SIMU
+# located after jaws and before MLC
+/gate/myLinacHead/daughters/name outPhSp
+/gate/myLinacHead/daughters/insert box
+/gate/outPhSp/setMaterial Air
+/gate/outPhSp/placement/setTranslation 0.0 -469.0 0.0 mm
+/gate/outPhSp/geometry/setXLength 400.0 mm
+/gate/outPhSp/geometry/setYLength 0.1 um
+/gate/outPhSp/geometry/setZLength 400.0 mm
+/gate/outPhSp/vis/setColor green
+/gate/outPhSp/vis/forceSolid
+/gate/outPhSp/vis/setVisible 0
+
+# PHASE SPACE PLANE FOR FILES PRODUCED BY A PREVIOUS GATE SIMU
+# located after MLC
+/gate/myLinacHead/daughters/name outPhSpMLC
+/gate/myLinacHead/daughters/insert box
+/gate/outPhSpMLC/setMaterial Air
+/gate/outPhSpMLC/placement/setTranslation 0.0 -560.0 0.0 mm
+#If Tony's reduced PhSp used:
+#/gate/outPhSpMLC/placement/setTranslation 0.0 -580.0 0.0 mm
+/gate/outPhSpMLC/geometry/setXLength 400.0 mm
+/gate/outPhSpMLC/geometry/setYLength 0.1 um
+#If Tony's reduced PhSp used:
+#/gate/outPhSpMLC/geometry/setYLength 0.1 mm
+/gate/outPhSpMLC/geometry/setZLength 400.0 mm
+/gate/outPhSpMLC/vis/setColor blue
+/gate/outPhSpMLC/vis/forceSolid
+/gate/outPhSpMLC/vis/setVisible 0
+
+# 				PHASE SPACE PLANE FOR VARIAN FILES
+# Because phase space gives particules in a z plane and we need y
+# we rotate it
+/gate/myLinacHead/daughters/name inPhSpVarian
+/gate/myLinacHead/daughters/insert box
+/gate/inPhSpVarian/setMaterial Air
+/gate/inPhSpVarian/geometry/setXLength 0.15 m
+/gate/inPhSpVarian/geometry/setYLength 0.15 m
+/gate/inPhSpVarian/geometry/setZLength 0.001 m
+/gate/inPhSpVarian/placement/setRotationAxis 1 0 0
+/gate/inPhSpVarian/placement/setRotationAngle 90.0 deg
+/gate/inPhSpVarian/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/inPhSpVarian/vis/setVisible 0
+
+#               CLINICAL CYLINDER FOR ARC THERAPY
+# A cylinder of 0.01 mm thickness of Air located after the MLC surrounding the phantom
+# One Clinical Cylinder store particules of an arc therapy no matter gantry angle
+
+/gate/world/daughters/name outPhSpCylinder
+/gate/world/daughters/insert cylinder
+/gate/outPhSpCylinder/setMaterial Air
+/gate/outPhSpCylinder/geometry/setRmin 369.9  mm
+/gate/outPhSpCylinder/geometry/setRmax 370 mm
+/gate/outPhSpCylinder/geometry/setHeight 1400 mm
+/gate/outPhSpCylinder/vis/setColor red
+/gate/outPhSpCylinder/vis/forceWireframe
+/gate/outPhSpCylinder/vis/setVisible 1
+
+# 				PHASE SPACE PLANE FOR GAGA SOURCE
+/gate/myLinacHead/daughters/name gaga_vol
+/gate/myLinacHead/daughters/insert box
+/gate/gaga_vol/setMaterial Air
+/gate/gaga_vol/geometry/setXLength 0.15 m
+/gate/gaga_vol/geometry/setYLength 0.001 mm
+/gate/gaga_vol/geometry/setZLength 0.15 m
+/gate/gaga_vol/vis/setVisible 1
+/gate/gaga_vol/vis/setColor red

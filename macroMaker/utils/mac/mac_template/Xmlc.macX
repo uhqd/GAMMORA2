@@ -1,0 +1,30 @@
+
+#----------------------------
+#----------------------------	
+#---------MLC Box------------
+#----------------------------		
+#----------------------------
+#/vis/viewer/zoom 2
+#/vis/viewer/panTo 0.2 -0.5
+#/vis/viewer/zoom 6   
+#/vis/viewer/set/viewpointThetaPhi 90 0
+/gate/myLinacHead/daughters/name MLCbox	
+/gate/myLinacHead/daughters/insert box
+/gate/MLCbox/setMaterial Air
+/gate/MLCbox/geometry/setXLength 720.0 mm
+/gate/MLCbox/geometry/setYLength 71.0 mm
+/gate/MLCbox/geometry/setZLength 140.0 mm
+/gate/MLCbox/placement/setRotationAxis 1 0 0 
+/gate/MLCbox/placement/setRotationAngle 0 deg
+
+/gate/MLCbox/placement/setTranslation 0.0 -519.8 0.0 mm # 1000-490.2
+#/gate/MLCbox/placement/setTranslation 0.0 -509.8 0.0 mm # 1000-490.2
+/gate/MLCbox/vis/setColor blue
+/gate/MLCbox/vis/setVisible 1
+
+
+
+
+
+
+

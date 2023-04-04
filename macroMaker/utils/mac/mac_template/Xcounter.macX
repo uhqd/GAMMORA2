@@ -1,0 +1,5 @@
+# COUNTER
+/gate/actor/addActor SimulationStatisticActor myCounter 
+/gate/actor/myCounter/save {out}/counter.txt
+/gate/actor/myCounter/saveEveryNSeconds     2
+

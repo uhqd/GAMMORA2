@@ -1,0 +1,356 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 				1_Quarter-leaf Isocenter
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+#/vis/viewer/set/viewpointThetaPhi 90 0
+/vis/viewer/zoom 1                    
+#/vis/viewer/zoom 3
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 				1_Quarter-leaf isocenter
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 
+# - - - - - - - - - -1_Quarter_leaf_isocenter1 SUPERIOR PART box- - - - - - - - - - - - - - - -
+
+/gate/MLCbox/daughters/name QLI_SUP1_180S
+/gate/MLCbox/daughters/insert box
+/gate/QLI_SUP1_180S/setMaterial Air
+/gate/QLI_SUP1_180S/geometry/setXLength 180.0 mm
+/gate/QLI_SUP1_180S/geometry/setYLength 32.83 mm
+/gate/QLI_SUP1_180S/geometry/setZLength 0.82 mm
+/gate/QLI_SUP1_180S/vis/setColor white
+/gate/QLI_SUP1_180S/placement/setTranslation 0.0 0.0 0.0 mm 
+/gate/QLI_SUP1_180S/vis/setVisible 0
+
+/gate/QLI_SUP1_180S/daughters/name QLI_SUP1_180
+/gate/QLI_SUP1_180S/daughters/insert box
+/gate/QLI_SUP1_180/setMaterial Air
+/gate/QLI_SUP1_180/geometry/setXLength 180.0 mm
+/gate/QLI_SUP1_180/geometry/setYLength 32.83 mm
+/gate/QLI_SUP1_180/geometry/setZLength 0.82 mm
+/gate/QLI_SUP1_180/vis/setColor white
+/gate/QLI_SUP1_180/placement/setTranslation 0.0 0.0 0.0 mm 
+/gate/QLI_SUP1_180/placement/setRotationAxis 0 1 0 
+/gate/QLI_SUP1_180/placement/setRotationAngle 180 deg
+/gate/QLI_SUP1_180/vis/setVisible 0
+# 
+# 
+# - - - - - - - - - -1_Quarter_leaf_isocenter SUPERIOR_1 PART FORMED AS A WEDGE- - - - - - - - - - - - - - - - 
+# 
+# 
+/gate/QLI_SUP1_180/daughters/name Quarter_leaf_isocenter_SUP1_180
+/gate/QLI_SUP1_180/daughters/insert wedge
+/gate/Quarter_leaf_isocenter_SUP1_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Quarter_leaf_isocenter_SUP1_180/geometry/setNarrowerXLength  20.0 mm
+/gate/Quarter_leaf_isocenter_SUP1_180/geometry/setXLength  176.8424148628170 mm
+/gate/Quarter_leaf_isocenter_SUP1_180/geometry/setYLength  31.63 mm
+/gate/Quarter_leaf_isocenter_SUP1_180/geometry/setZLength  0.82 mm
+/gate/Quarter_leaf_isocenter_SUP1_180/placement/setRotationAxis 0 0 1    
+/gate/Quarter_leaf_isocenter_SUP1_180/placement/setRotationAngle 180 deg
+
+/gate/Quarter_leaf_isocenter_SUP1_180/placement/setTranslation 40.789396284295748 -0.6 0.0 mm 
+/gate/Quarter_leaf_isocenter_SUP1_180/vis/setColor blue
+/gate/Quarter_leaf_isocenter_SUP1_180/vis/forceSolid 1
+/gate/Quarter_leaf_isocenter_SUP1_180/vis/setVisible 1
+# 
+# - - - - - - - - - 1_Quarter-leaf target isocenter_1 PART FORMED AS A PART OF A CYLINDER- - - - - - - - - - - 
+# 
+
+/gate/QLI_SUP1_180/daughters/name Quarter_leaf_isocenter_round_sup1_180
+/gate/QLI_SUP1_180/daughters/insert cylinder
+
+/gate/Quarter_leaf_isocenter_round_sup1_180/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Quarter_leaf_isocenter_round_sup1_180/geometry/setRmin 0 mm
+/gate/Quarter_leaf_isocenter_round_sup1_180/geometry/setRmax 160 mm
+/gate/Quarter_leaf_isocenter_round_sup1_180/geometry/setHeight 0.82 mm
+/gate/Quarter_leaf_isocenter_round_sup1_180/geometry/setPhiStart -11.4017628024  deg
+/gate/Quarter_leaf_isocenter_round_sup1_180/geometry/setDeltaPhi 11.4017628024 deg
+/gate/Quarter_leaf_isocenter_round_sup1_180/placement/setTranslation 70.0 -16.415 0.0 mm 
+/gate/Quarter_leaf_isocenter_round_sup1_180/placement/setRotationAxis 0 0 1
+/gate/Quarter_leaf_isocenter_round_sup1_180/placement/setRotationAngle 180 deg
+
+/gate/Quarter_leaf_isocenter_round_sup1_180/vis/setColor blue
+/gate/Quarter_leaf_isocenter_round_sup1_180/vis/forceSolid 1
+
+/gate/Quarter_leaf_isocenter_round_sup1_180/vis/setVisible 1
+# 
+# 
+# - - - - - - - - - Bottom Leaf_Inf tip- - - - - - - - - - -
+
+/gate/QLI_SUP1_180/daughters/name QLI_SUP_Tip_box_180
+/gate/QLI_SUP1_180/daughters/insert box
+/gate/QLI_SUP_Tip_box_180/setMaterial Air
+/gate/QLI_SUP_Tip_box_180/geometry/setXLength 180 mm
+/gate/QLI_SUP_Tip_box_180/geometry/setYLength 1.2 mm
+/gate/QLI_SUP_Tip_box_180/geometry/setZLength 0.35 mm
+/gate/QLI_SUP_Tip_box_180/vis/setColor blue
+/gate/QLI_SUP_Tip_box_180/placement/setTranslation 0.0 15.815 0.235 mm 
+/gate/QLI_SUP_Tip_box_180/placement/setRotationAxis 1 0 0    
+/gate/QLI_SUP_Tip_box_180/placement/setRotationAngle 180 deg
+/gate/QLI_SUP_Tip_box_180/vis/forceSolid 1
+/gate/QLI_SUP_Tip_box_180/vis/setVisible 0
+
+/gate/QLI_SUP_Tip_box/daughters/name QLI_SUP_Tip_180
+/gate/QLI_SUP_Tip_box/daughters/insert wedge
+/gate/QLI_SUP_Tip_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/QLI_SUP_Tip_180/geometry/setNarrowerXLength  176.5956292493504 mm
+/gate/QLI_SUP_Tip_180/geometry/setXLength  176.8424148628170 mm
+/gate/QLI_SUP_Tip_180/geometry/setYLength  1.2 mm
+/gate/QLI_SUP_Tip_180/geometry/setZLength  0.35 mm
+/gate/QLI_SUP_Tip_180/placement/setRotationAxis 0 0 1    
+/gate/QLI_SUP_Tip_180/placement/setRotationAngle 180 deg
+/gate/QLI_SUP_Tip_180/placement/setTranslation 1.640488971958149 0 0.0 mm 
+/gate/QLI_SUP_Tip_180/vis/setColor blue
+/gate/QLI_SUP_Tip_180/vis/forceSolid 1
+/gate/QLI_SUP_Tip_180/vis/setVisible 1
+
+##----------------Reapeater and motion-----------------------##
+
+
+/gate/QLI_SUP1_180S/moves/insert genericRepeaterMove
+/gate/QLI_SUP1_180S/genericRepeaterMove/setPlacementsFilename DIR/precise_QLI_SUP180.placements
+/gate/QLI_SUP1_180S/genericRepeaterMove/useRelativeTranslation 1
+# 
+# 
+# 
+# - - - - - - - - - -1_Quarter_leaf_inferior PART box- - - - - - - - - - - - - - - -
+# - - - - - - - - - -1_Quarter_leaf_inferior PART box- - - - - - - - - - - - - - - -
+# - - - - - - - - - -1_Quarter_leaf_inferior PART box- - - - - - - - - - - - - - - -
+# - - - - - - - - - -1_Quarter_leaf_inferior PART box- - - - - - - - - - - - - - - -
+# - - - - - - - - - -1_Quarter_leaf_inferior PART box- - - - - - - - - - - - - - - -
+# 
+# 
+# 
+# 
+/gate/MLCbox/daughters/name QLI_INFALL_180S
+/gate/MLCbox/daughters/insert box
+/gate/QLI_INFALL_180S/setMaterial Air
+/gate/QLI_INFALL_180S/geometry/setXLength 180.0 mm
+/gate/QLI_INFALL_180S/geometry/setYLength 34.67 mm
+/gate/QLI_INFALL_180S/geometry/setZLength 1.62 mm
+/gate/QLI_INFALL_180S/vis/setColor white
+/gate/QLI_INFALL_180S/placement/setTranslation 0.0 0.0 0.0 mm 
+/gate/QLI_INFALL_180S/vis/setVisible 0
+
+
+/gate/QLI_INFALL_180S/daughters/name QLI_INFALL_180
+/gate/QLI_INFALL_180S/daughters/insert box
+/gate/QLI_INFALL_180/setMaterial Air
+/gate/QLI_INFALL_180/geometry/setXLength 180.0 mm
+/gate/QLI_INFALL_180/geometry/setYLength 34.67 mm
+/gate/QLI_INFALL_180/geometry/setZLength 1.62 mm
+/gate/QLI_INFALL_180/vis/setColor white
+/gate/QLI_INFALL_180/placement/setTranslation 0.0 0.0 0.0 mm 
+/gate/QLI_INFALL_180/placement/setRotationAxis 0 1 0 
+/gate/QLI_INFALL_180/placement/setRotationAngle 180 deg
+/gate/QLI_INFALL_180/vis/setVisible 0
+# 
+# 
+# - - - - - - - - - -1_Quarter_leaf_isocenter2 SUPERIOR PART box- - - - - - - - - - - - - - - -
+# 
+/gate/QLI_INFALL_180/daughters/name QLI_SUP2_180
+/gate/QLI_INFALL_180/daughters/insert box
+/gate/QLI_SUP2_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/QLI_SUP2_180/placement/setTranslation 0.0 17.275 -0.2 mm
+/gate/QLI_SUP2_180/geometry/setXLength 180.0 mm
+/gate/QLI_SUP2_180/geometry/setYLength 0.12 mm
+/gate/QLI_SUP2_180/geometry/setZLength 1.22 mm
+/gate/QLI_SUP2_180/placement/setRotationAxis 0 0 1 
+/gate/QLI_SUP2_180/placement/setRotationAngle 0 deg
+/gate/QLI_SUP2_180/vis/setColor blue
+/gate/QLI_SUP2_180/vis/forceSolid 1
+/gate/QLI_SUP2_180/vis/setVisible 1
+# 
+# 
+# 
+# 
+# - - - - - - - - - -1_Quarter-leaf isocenter INFERIOR PART box- - - - - - - - - - - - - - - -
+# 
+/gate/QLI_INFALL_180/daughters/name QLI_INF_180
+/gate/QLI_INFALL_180/daughters/insert box
+/gate/QLI_INF_180/setMaterial Air
+/gate/QLI_INF_180/placement/setTranslation 0.0 -0.06 -0.0 mm
+/gate/QLI_INF_180/geometry/setXLength 180.0 mm
+/gate/QLI_INF_180/geometry/setYLength 34.55 mm
+/gate/QLI_INF_180/geometry/setZLength 1.62 mm
+/gate/QLI_INF_180/placement/setRotationAxis 0 0 1 
+/gate/QLI_INF_180/placement/setRotationAngle 0 deg
+/gate/QLI_INF_180/vis/setColor white
+/gate/QLI_INF_180/vis/setVisible 0
+# 
+# 
+# 
+# - - - - - - - - - -1_Quarter-leaf isocenter INFERIOR PART FORMED AS A WEDGE- - - - - - - - - - - - - - - - - 
+# 
+# 
+/gate/QLI_INF_180/daughters/name Quarter_leaf_isocenter_INF_180
+/gate/QLI_INF_180/daughters/insert wedge
+/gate/Quarter_leaf_isocenter_INF_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Quarter_leaf_isocenter_INF_180/geometry/setNarrowerXLength  20.0 mm
+#/gate/Quarter_leaf_isocenter_INF_180/geometry/setXLength  156.24 mm
+/gate/Quarter_leaf_isocenter_INF_180/geometry/setXLength  176.9384513113341 mm
+/gate/Quarter_leaf_isocenter_INF_180/geometry/setYLength  31.15 mm
+/gate/Quarter_leaf_isocenter_INF_180/geometry/setZLength  1.62 mm
+/gate/Quarter_leaf_isocenter_INF_180/placement/setRotationAxis 0 1 0    
+/gate/Quarter_leaf_isocenter_INF_180/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_isocenter_INF_180/placement/setTranslation 40.765387172166463 1.7 0.0 mm 
+/gate/Quarter_leaf_isocenter_INF_180/vis/setColor blue
+/gate/Quarter_leaf_isocenter_INF_180/vis/forceSolid 1
+/gate/Quarter_leaf_isocenter_INF_180/vis/setVisible 1
+
+/gate/Quarter_leaf_isocenter_INF_180/daughters/name Quarter_leaf_isocenter_INF_screwhW180
+/gate/Quarter_leaf_isocenter_INF_180/daughters/insert wedge
+/gate/Quarter_leaf_isocenter_INF_screwhW180/setMaterial Air
+/gate/Quarter_leaf_isocenter_INF_screwhW180/geometry/setNarrowerXLength  137.6408615771340 mm
+/gate/Quarter_leaf_isocenter_INF_screwhW180/geometry/setXLength  147.7171666372740 mm
+/gate/Quarter_leaf_isocenter_INF_screwhW180/geometry/setYLength  2 mm
+/gate/Quarter_leaf_isocenter_INF_screwhW180/geometry/setZLength  1.62 mm
+#/gate/Quarter_leaf_isocenter_INF_screwhW180/placement/setRotationAxis 0 0 1    
+#/gate/Quarter_leaf_isocenter_INF_screwhW180/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_isocenter_INF_screwhW180/placement/setTranslation 22.104894225768497 -8.775 0.0 mm 
+/gate/Quarter_leaf_isocenter_INF_screwhW180/vis/setColor black
+/gate/Quarter_leaf_isocenter_INF_screwhW180/vis/forceSolid 1
+/gate/Quarter_leaf_isocenter_INF_screwhW180/vis/setVisible 1
+
+# - - - - - - - - - 1_Quarter-leaf target isocenter PART FORMED AS A PART OF A CYLINDER- - - - - - - - - - - 
+# 
+# 
+/gate/QLI_INF_180/daughters/name Quarter_leaf_isocenter_round_inf180
+/gate/QLI_INF_180/daughters/insert cylinder
+
+/gate/Quarter_leaf_isocenter_round_inf180/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Quarter_leaf_isocenter_round_inf180/geometry/setRmin 0 mm
+/gate/Quarter_leaf_isocenter_round_inf180/geometry/setRmax 160 mm
+/gate/Quarter_leaf_isocenter_round_inf180/geometry/setHeight 1.62 mm
+/gate/Quarter_leaf_isocenter_round_inf180/geometry/setPhiStart 0  deg
+/gate/Quarter_leaf_isocenter_round_inf180/geometry/setDeltaPhi 11.2264687951 deg
+/gate/Quarter_leaf_isocenter_round_inf180/placement/setTranslation 70.0 17.275 0.0 mm 
+/gate/Quarter_leaf_isocenter_round_inf180/placement/setRotationAxis 0 0 1
+/gate/Quarter_leaf_isocenter_round_inf180/placement/setRotationAngle 180 deg
+
+/gate/Quarter_leaf_isocenter_round_inf180/vis/setColor blue
+/gate/Quarter_leaf_isocenter_round_inf180/vis/forceSolid 1
+
+/gate/Quarter_leaf_isocenter_round_inf180/vis/setVisible 1
+
+
+
+/gate/Quarter_leaf_isocenter_round_inf180/daughters/name Quarter_leaf_isocenter_INF_screwhC180
+/gate/Quarter_leaf_isocenter_round_inf180/daughters/insert wedge
+/gate/Quarter_leaf_isocenter_INF_screwhC180/setMaterial Air
+/gate/Quarter_leaf_isocenter_INF_screwhC180/geometry/setNarrowerXLength  15.282833362725967 mm
+/gate/Quarter_leaf_isocenter_INF_screwhC180/geometry/setXLength  25.359138422865954 mm
+/gate/Quarter_leaf_isocenter_INF_screwhC180/geometry/setYLength  2 mm
+/gate/Quarter_leaf_isocenter_INF_screwhC180/geometry/setZLength  1.62 mm
+/gate/Quarter_leaf_isocenter_INF_screwhC180/placement/setRotationAxis 0 1 0    
+/gate/Quarter_leaf_isocenter_INF_screwhC180/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_isocenter_INF_screwhC180/placement/setTranslation 132.8395070536020 24.35 0.0 mm 
+/gate/Quarter_leaf_isocenter_INF_screwhC180/vis/setColor black
+/gate/Quarter_leaf_isocenter_INF_screwhC180/vis/forceSolid 1
+/gate/Quarter_leaf_isocenter_INF_screwhC180/vis/setVisible 1
+# 
+# 
+# 
+# - - - - - - - - - -1_Quarter_leaf_target SUPERIOR PART Hole- - - - - - - - - - - - - - - - 
+# 
+/gate/QLI_INF_180/daughters/name Quarter_leaf_Isocenter_INF_Hole_box180
+/gate/QLI_INF_180/daughters/insert box
+/gate/Quarter_leaf_Isocenter_INF_Hole_box180/setMaterial Air
+/gate/Quarter_leaf_Isocenter_INF_Hole_box180/geometry/setXLength 180 mm
+/gate/Quarter_leaf_Isocenter_INF_Hole_box180/geometry/setYLength 2.4 mm
+/gate/Quarter_leaf_Isocenter_INF_Hole_box180/geometry/setZLength 0.72 mm
+#/gate/Quarter_leaf_Isocenter_INF_Hole_box180/placement/setRotationAxis 1 0 0    
+#/gate/Quarter_leaf_Isocenter_INF_Hole_box180/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_Isocenter_INF_Hole_box180/placement/setTranslation 0.0 -15.075 -0.45 mm 
+/gate/Quarter_leaf_Isocenter_INF_Hole_box180/vis/setColor blue
+/gate/Quarter_leaf_Isocenter_INF_Hole_box180/vis/forceSolid 0
+/gate/Quarter_leaf_Isocenter_INF_Hole_box180/vis/setVisible 0
+
+
+/gate/Quarter_leaf_Isocenter_INF_Hole_box180/daughters/name Quarter_leaf_Isocenter_INF_Hole180
+/gate/Quarter_leaf_Isocenter_INF_Hole_box180/daughters/insert wedge
+/gate/Quarter_leaf_Isocenter_INF_Hole180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Quarter_leaf_Isocenter_INF_Hole180/geometry/setNarrowerXLength  176.4429528614185 mm
+/gate/Quarter_leaf_Isocenter_INF_Hole180/geometry/setXLength  176.9384513113341 mm
+/gate/Quarter_leaf_Isocenter_INF_Hole180/geometry/setYLength  2.4 mm
+/gate/Quarter_leaf_Isocenter_INF_Hole180/geometry/setZLength  0.72 mm
+/gate/Quarter_leaf_Isocenter_INF_Hole180/placement/setRotationAxis 0 0 1    
+/gate/Quarter_leaf_Isocenter_INF_Hole180/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_Isocenter_INF_Hole180/placement/setTranslation 1.654648956811855 0.0 0.0 mm 
+/gate/Quarter_leaf_Isocenter_INF_Hole180/vis/setColor blue
+/gate/Quarter_leaf_Isocenter_INF_Hole180/vis/forceSolid 1
+/gate/Quarter_leaf_Isocenter_INF_Hole180/vis/setVisible 1
+# 
+# 
+# - - - - - - - - - -1_Quarter_leaf_target SUPERIOR PART Tip FORMED AS A WEDGE- - - - - - - - - - - - - - - - 
+# 
+# 1st box to perform double rotation
+# 
+/gate/QLI_INF_180/daughters/name QLI_INF_tipBox180
+/gate/QLI_INF_180/daughters/insert box
+/gate/QLI_INF_tipBox180/setMaterial Air
+/gate/QLI_INF_tipBox180/geometry/setXLength 180.0 mm
+/gate/QLI_INF_tipBox180/geometry/setYLength 1.00 mm
+/gate/QLI_INF_tipBox180/geometry/setZLength 1.62 mm
+/gate/QLI_INF_tipBox180/placement/setTranslation 0.0 -16.775 0.0 mm 
+/gate/QLI_INF_tipBox180/vis/setColor white
+/gate/QLI_INF_tipBox180/vis/setVisible 0
+
+
+/gate/QLI_INF_tipBox180/daughters/name QLI_INF_tipBox1_180
+/gate/QLI_INF_tipBox180/daughters/insert box
+/gate/QLI_INF_tipBox1_180/setMaterial Air
+/gate/QLI_INF_tipBox1_180/geometry/setXLength 175.4429528614185 mm
+/gate/QLI_INF_tipBox1_180/geometry/setYLength 1.00 mm
+/gate/QLI_INF_tipBox1_180/geometry/setZLength 1.62 mm
+/gate/QLI_INF_tipBox1_180/placement/setTranslation 2.278523569290755 0.0 0.0 mm 
+/gate/QLI_INF_tipBox1_180/placement/setRotationAxis 1 0 0
+/gate/QLI_INF_tipBox1_180/placement/setRotationAngle 180 deg
+/gate/QLI_INF_tipBox1_180/vis/setColor white
+/gate/QLI_INF_tipBox1_180/vis/setVisible 0
+
+
+/gate/QLI_INF_tipBox1_180/daughters/name Quarter_leaf_Isocenter_INF_Tip_180
+/gate/QLI_INF_tipBox1_180/daughters/insert wedge
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/geometry/setNarrowerXLength  0.72 mm
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/geometry/setXLength  1.62 mm
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/geometry/setYLength  1 mm
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/geometry/setZLength  175.4429528614185 mm
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/placement/setRotationAxis 0 1 0    
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/placement/setRotationAngle 90 deg
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/placement/setTranslation 0.0 0.0 0.225 mm 
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/vis/setColor blue
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/vis/forceSolid 1
+/gate/Quarter_leaf_Isocenter_INF_Tip_180/vis/setVisible 1
+
+
+
+
+
+/gate/QLI_INF_tipBox180/daughters/name Quarter_leaf_Isocenter_INF_Tip2_180
+/gate/QLI_INF_tipBox180/daughters/insert wedge
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/geometry/setNarrowerXLength  0.782197162513313 mm
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/geometry/setXLength  1 mm
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/geometry/setYLength  1 mm
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/geometry/setZLength  0.72 mm
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/placement/setRotationAxis 0 0 1    
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/placement/setTranslation -85.888502152046811 0.0 -0.45 mm ## Xtranslation=170.4429528614185-Decalage(87.054450709371679)
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/vis/setColor blue
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/vis/forceSolid 1
+/gate/Quarter_leaf_Isocenter_INF_Tip2_180/vis/setVisible 1
+
+# ##----------------Reapeater and motion-----------------------##
+# 
+# 
+/gate/QLI_INFALL_180S/moves/insert genericRepeaterMove
+/gate/QLI_INFALL_180S/genericRepeaterMove/setPlacementsFilename DIR/precise_QLI_INF180.placements
+/gate/QLI_INFALL_180S/genericRepeaterMove/useRelativeTranslation 1

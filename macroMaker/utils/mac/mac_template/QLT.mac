@@ -1,0 +1,297 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 				1_Quarter-leaf target
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+#/vis/viewer/set/viewpointThetaPhi 90 0
+/vis/viewer/zoom 2                    
+#/vis/viewer/zoom 3
+# - - - - - - - - - -1_Quarter_leaf_target SUPERIOR PART box- - - - - - - - - - - - - - - - 
+# 
+# 
+# 
+/gate/MLCbox/daughters/name QLT_SUP
+/gate/MLCbox/daughters/insert box
+/gate/QLT_SUP/setMaterial Air
+/gate/QLT_SUP/geometry/setXLength 180.0 mm
+/gate/QLT_SUP/geometry/setYLength 34.88 mm
+/gate/QLT_SUP/geometry/setZLength 1.62 mm
+/gate/QLT_SUP/vis/setColor white
+/gate/QLT_SUP/placement/setTranslation 180.0 0.0006 0.0 mm 
+/gate/QLT_SUP/vis/setVisible 0
+# 
+# 
+# 
+# 
+# 
+# - - - - - - - - - -1_Quarter_leaf_target SUPERIOR PART FORMED AS A WEDGE- - - - - - - - - - - - - - - - 
+# 
+/gate/QLT_SUP/daughters/name Quarter_leaf_target_SUP
+/gate/QLT_SUP/daughters/insert wedge
+/gate/Quarter_leaf_target_SUP/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Quarter_leaf_target_SUP/geometry/setNarrowerXLength  20.0 mm
+/gate/Quarter_leaf_target_SUP/geometry/setXLength  176.8524899387957 mm
+/gate/Quarter_leaf_target_SUP/geometry/setYLength  31.58 mm
+/gate/Quarter_leaf_target_SUP/geometry/setZLength  1.62 mm
+/gate/Quarter_leaf_target_SUP/placement/setRotationAxis 0 0 1    
+/gate/Quarter_leaf_target_SUP/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_target_SUP/placement/setTranslation 40.786877515301079 -1.65 0.0 mm 
+/gate/Quarter_leaf_target_SUP/vis/setColor red
+/gate/Quarter_leaf_target_SUP/vis/forceSolid 1
+/gate/Quarter_leaf_target_SUP/vis/setVisible 1
+
+
+
+/gate/Quarter_leaf_target_SUP/daughters/name Quarter_leaf_target_SUP_screwhW
+/gate/Quarter_leaf_target_SUP/daughters/insert wedge
+/gate/Quarter_leaf_target_SUP_screwhW/setMaterial Air
+/gate/Quarter_leaf_target_SUP_screwhW/geometry/setNarrowerXLength  137.6145333048527 mm
+/gate/Quarter_leaf_target_SUP_screwhW/geometry/setXLength  147.5481932123571 mm
+/gate/Quarter_leaf_target_SUP_screwhW/geometry/setYLength  2 mm
+/gate/Quarter_leaf_target_SUP_screwhW/geometry/setZLength  1.62 mm
+#/gate/Quarter_leaf_target_SUP_screwhW/placement/setRotationAxis 0 0 1    
+#/gate/Quarter_leaf_target_SUP_screwhW/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_target_SUP_screwhW/placement/setTranslation 22.077559144603541 -8.89 0.0 mm 
+/gate/Quarter_leaf_target_SUP_screwhW/vis/setColor black
+/gate/Quarter_leaf_target_SUP_screwhW/vis/forceSolid 1
+/gate/Quarter_leaf_target_SUP_screwhW/vis/setVisible 1
+
+
+# 
+# - - - - - - - - - 1_Quarter-leaf target SUPERIOR PART FORMED AS A PART OF A CYLINDER- - - - - - - - - - - 
+# 
+
+/gate/QLT_SUP/daughters/name Quarter_leaf_target_round_sup
+/gate/QLT_SUP/daughters/insert cylinder
+
+/gate/Quarter_leaf_target_round_sup/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Quarter_leaf_target_round_sup/geometry/setRmin 0 mm
+/gate/Quarter_leaf_target_round_sup/geometry/setRmax 160 mm
+/gate/Quarter_leaf_target_round_sup/geometry/setHeight 1.62 mm
+/gate/Quarter_leaf_target_round_sup/geometry/setPhiStart -11.3834979921  deg
+/gate/Quarter_leaf_target_round_sup/geometry/setDeltaPhi 11.3834979921 deg
+/gate/Quarter_leaf_target_round_sup/placement/setTranslation 70 -17.44 0.0 mm 
+/gate/Quarter_leaf_target_round_sup/placement/setRotationAxis 0 0 1
+/gate/Quarter_leaf_target_round_sup/placement/setRotationAngle 180 deg
+
+/gate/Quarter_leaf_target_round_sup/vis/setColor red
+/gate/Quarter_leaf_target_round_sup/vis/forceSolid 1
+
+/gate/Quarter_leaf_target_round_sup/vis/setVisible 1
+
+
+/gate/Quarter_leaf_target_round_sup/daughters/name Quarter_leaf_target_SUP_screwhC
+/gate/Quarter_leaf_target_round_sup/daughters/insert wedge
+/gate/Quarter_leaf_target_SUP_screwhC/setMaterial Air
+/gate/Quarter_leaf_target_SUP_screwhC/geometry/setNarrowerXLength  15.451806787642852 mm
+/gate/Quarter_leaf_target_SUP_screwhC/geometry/setXLength  25.3854666951473011 mm
+/gate/Quarter_leaf_target_SUP_screwhC/geometry/setYLength  2 mm
+/gate/Quarter_leaf_target_SUP_screwhC/geometry/setZLength  1.62 mm
+/gate/Quarter_leaf_target_SUP_screwhC/placement/setRotationAxis 0 0 1    
+/gate/Quarter_leaf_target_SUP_screwhC/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_target_SUP_screwhC/placement/setTranslation  132.7906816293025 -24.68 0.0 mm 
+/gate/Quarter_leaf_target_SUP_screwhC/vis/setColor black
+/gate/Quarter_leaf_target_SUP_screwhC/vis/forceSolid 1
+/gate/Quarter_leaf_target_SUP_screwhC/vis/setVisible 1
+# 
+# - - - - - - - - - -1_Quarter_leaf_target SUPERIOR PART Hole- - - - - - - - - - - - - - - - 
+# 
+/gate/QLT_SUP/daughters/name Quarter_leaf_target_SUP_Hole_box
+/gate/QLT_SUP/daughters/insert box
+/gate/Quarter_leaf_target_SUP_Hole_box/setMaterial Air
+/gate/Quarter_leaf_target_SUP_Hole_box/geometry/setXLength 180 mm
+/gate/Quarter_leaf_target_SUP_Hole_box/geometry/setYLength 2.3 mm
+/gate/Quarter_leaf_target_SUP_Hole_box/geometry/setZLength 0.73 mm
+/gate/Quarter_leaf_target_SUP_Hole_box/placement/setRotationAxis 0 0 1    
+/gate/Quarter_leaf_target_SUP_Hole_box/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_target_SUP_Hole_box/placement/setTranslation 0.0 15.29 0.445 mm 
+/gate/Quarter_leaf_target_SUP_Hole_box/vis/setColor yellow
+/gate/Quarter_leaf_target_SUP_Hole_box/vis/forceSolid 0
+/gate/Quarter_leaf_target_SUP_Hole_box/vis/setVisible 0
+
+/gate/Quarter_leaf_target_SUP_Hole_box/daughters/name Quarter_leaf_target_SUP_Hole
+/gate/Quarter_leaf_target_SUP_Hole_box/daughters/insert wedge
+/gate/Quarter_leaf_target_SUP_Hole/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Quarter_leaf_target_SUP_Hole/geometry/setNarrowerXLength  176.3718184328621 mm
+/gate/Quarter_leaf_target_SUP_Hole/geometry/setXLength  176.8524899387957 mm
+/gate/Quarter_leaf_target_SUP_Hole/geometry/setYLength  2.3 mm
+/gate/Quarter_leaf_target_SUP_Hole/geometry/setZLength  0.73 mm
+/gate/Quarter_leaf_target_SUP_Hole/placement/setRotationAxis 1 0 0    
+/gate/Quarter_leaf_target_SUP_Hole/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_target_SUP_Hole/placement/setTranslation -1.693922907085536 0.0 0.0 mm 
+/gate/Quarter_leaf_target_SUP_Hole/vis/setColor red
+/gate/Quarter_leaf_target_SUP_Hole/vis/forceSolid 1
+/gate/Quarter_leaf_target_SUP_Hole/vis/setVisible 1
+# 
+# 
+# 
+# 
+# 
+# - - - - - - - - - -1_Quarter_leaf_target SUPERIOR PART Tip FORMED AS A WEDGE- - - - - - - - - - - - - - - - 
+# 
+/gate/QLT_SUP/daughters/name Quarter_leaf_target_SUP_Tip_box
+/gate/QLT_SUP/daughters/insert box
+/gate/Quarter_leaf_target_SUP_Tip_box/setMaterial Air
+/gate/Quarter_leaf_target_SUP_Tip_box/geometry/setXLength 175.3718184328621 mm
+/gate/Quarter_leaf_target_SUP_Tip_box/geometry/setYLength 1 mm
+/gate/Quarter_leaf_target_SUP_Tip_box/geometry/setZLength 1.62 mm
+#/gate/Quarter_leaf_target_SUP_Tip_box/placement/setRotationAxis 1 0 0   
+#/gate/Quarter_leaf_target_SUP_Tip_box/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_target_SUP_Tip_box/placement/setTranslation 2.314090783568943 16.94 0.0 mm 
+/gate/Quarter_leaf_target_SUP_Tip_box/vis/setColor white
+/gate/Quarter_leaf_target_SUP_Tip_box/vis/forceSolid 0
+/gate/Quarter_leaf_target_SUP_Tip_box/vis/setVisible 0
+
+
+
+/gate/Quarter_leaf_target_SUP_Tip_box/daughters/name Quarter_leaf_target_SUP_Tip
+/gate/Quarter_leaf_target_SUP_Tip_box/daughters/insert wedge
+/gate/Quarter_leaf_target_SUP_Tip/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Quarter_leaf_target_SUP_Tip/geometry/setNarrowerXLength  0.73 mm
+/gate/Quarter_leaf_target_SUP_Tip/geometry/setXLength  1.62 mm
+/gate/Quarter_leaf_target_SUP_Tip/geometry/setYLength  1 mm
+/gate/Quarter_leaf_target_SUP_Tip/geometry/setZLength  175.3718184328621 mm
+/gate/Quarter_leaf_target_SUP_Tip/placement/setRotationAxis 0 1 0    
+/gate/Quarter_leaf_target_SUP_Tip/placement/setRotationAngle 90 deg
+/gate/Quarter_leaf_target_SUP_Tip/placement/setTranslation 0.0 0.0 0.2225 mm 
+/gate/Quarter_leaf_target_SUP_Tip/vis/setColor red
+/gate/Quarter_leaf_target_SUP_Tip/vis/forceSolid 1
+/gate/Quarter_leaf_target_SUP_Tip/vis/setVisible 1
+
+
+
+/gate/QLT_SUP/daughters/name Quarter_leaf_target_SUP_Tip_box_1
+/gate/QLT_SUP/daughters/insert box
+/gate/Quarter_leaf_target_SUP_Tip_box_1/setMaterial Air
+/gate/Quarter_leaf_target_SUP_Tip_box_1/geometry/setXLength 4.628181567137887 mm
+/gate/Quarter_leaf_target_SUP_Tip_box_1/geometry/setYLength 1 mm
+/gate/Quarter_leaf_target_SUP_Tip_box_1/geometry/setZLength 1.62 mm
+/gate/Quarter_leaf_target_SUP_Tip_box_1/placement/setRotationAxis 0 0 1    
+/gate/Quarter_leaf_target_SUP_Tip_box_1/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_target_SUP_Tip_box_1/placement/setTranslation -87.685909216431057 16.94 0.0 mm 
+/gate/Quarter_leaf_target_SUP_Tip_box_1/vis/setColor white
+/gate/Quarter_leaf_target_SUP_Tip_box_1/vis/forceSolid 0
+/gate/Quarter_leaf_target_SUP_Tip_box_1/vis/setVisible 0
+
+
+/gate/Quarter_leaf_target_SUP_Tip_box_1/daughters/name Quarter_leaf_target_SUP_Tip_1
+/gate/Quarter_leaf_target_SUP_Tip_box_1/daughters/insert wedge
+/gate/Quarter_leaf_target_SUP_Tip_1/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Quarter_leaf_target_SUP_Tip_1/geometry/setNarrowerXLength  0.779984630695282 mm
+/gate/Quarter_leaf_target_SUP_Tip_1/geometry/setXLength  1 mm
+/gate/Quarter_leaf_target_SUP_Tip_1/geometry/setYLength  1 mm
+/gate/Quarter_leaf_target_SUP_Tip_1/geometry/setZLength  0.73 mm
+/gate/Quarter_leaf_target_SUP_Tip_1/placement/setRotationAxis 1 0 0    
+/gate/Quarter_leaf_target_SUP_Tip_1/placement/setRotationAngle 180 deg
+/gate/Quarter_leaf_target_SUP_Tip_1/placement/setTranslation -1.869094625895123 0.0 0.445 mm 
+/gate/Quarter_leaf_target_SUP_Tip_1/vis/setColor red
+/gate/Quarter_leaf_target_SUP_Tip_1/vis/forceSolid 1
+/gate/Quarter_leaf_target_SUP_Tip_1/vis/setVisible 1
+
+
+##----------------Reapeater and motion-----------------------##
+
+
+/gate/QLT_SUP/moves/insert genericRepeaterMove
+/gate/QLT_SUP/genericRepeaterMove/setPlacementsFilename DIR/precise_QLT_SUP.placements
+/gate/QLT_SUP/genericRepeaterMove/useRelativeTranslation 1
+
+
+# - - - - - - - - - -1_Quarter_leaf_target INFERIOR PART box- - - - - - - - - - - - - - - - 
+# 
+/gate/MLCbox/daughters/name QLT_INF
+/gate/MLCbox/daughters/insert box
+/gate/QLT_INF/setMaterial Air
+/gate/QLT_INF/geometry/setXLength 180.0 mm
+/gate/QLT_INF/geometry/setYLength 32.62 mm
+/gate/QLT_INF/geometry/setZLength 0.82 mm
+/gate/QLT_INF/vis/setColor white
+/gate/QLT_INF/placement/setTranslation 180.0 0.0006 0.0 mm 
+/gate/QLT_INF/vis/setVisible 0
+
+# 
+# - - - - - - - - - -1_Quarter-leaf target INFERIOR PART FORMED AS A WEDGE- - - - - - - - - - - - - - - - - 
+# 
+# 
+/gate/QLT_INF/daughters/name Quarter_leaf_target_INF
+/gate/QLT_INF/daughters/insert wedge
+/gate/Quarter_leaf_target_INF/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Quarter_leaf_target_INF/geometry/setNarrowerXLength  20.0 mm
+/gate/Quarter_leaf_target_INF/geometry/setXLength  176.8846187489392 mm
+/gate/Quarter_leaf_target_INF/geometry/setYLength  31.42 mm
+/gate/Quarter_leaf_target_INF/geometry/setZLength  0.82 mm
+/gate/Quarter_leaf_target_INF/placement/setRotationAxis 0 1 0    
+/gate/Quarter_leaf_target_INF/placement/setRotationAngle 180 deg
+
+/gate/Quarter_leaf_target_INF/placement/setTranslation 40.778845312765206 0.6 0.0 mm 
+/gate/Quarter_leaf_target_INF/vis/setColor red
+/gate/Quarter_leaf_target_INF/vis/forceSolid 1
+
+/gate/Quarter_leaf_target_INF/vis/setVisible 1
+# 
+# 
+
+# - - - - - - - - - 1_Quarter-leaf target INFERIOR PART FORMED AS A PART OF A CYLINDER- - - - - - - - - - - 
+# 
+# 
+/gate/QLT_INF/daughters/name Quarter_leaf_target_round_inf
+/gate/QLT_INF/daughters/insert cylinder
+
+/gate/Quarter_leaf_target_round_inf/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Quarter_leaf_target_round_inf/geometry/setRmin 0 mm
+/gate/Quarter_leaf_target_round_inf/geometry/setRmax 160 mm
+/gate/Quarter_leaf_target_round_inf/geometry/setHeight 0.82 mm
+/gate/Quarter_leaf_target_round_inf/geometry/setPhiStart 0  deg
+/gate/Quarter_leaf_target_round_inf/geometry/setDeltaPhi 11.3250584664 deg
+/gate/Quarter_leaf_target_round_inf/placement/setTranslation 70.0 16.31 0.0 mm 
+/gate/Quarter_leaf_target_round_inf/placement/setRotationAxis 0 0 1
+/gate/Quarter_leaf_target_round_inf/placement/setRotationAngle 180 deg
+
+/gate/Quarter_leaf_target_round_inf/vis/setColor red
+/gate/Quarter_leaf_target_round_inf/vis/forceSolid 1
+
+/gate/Quarter_leaf_target_round_inf/vis/setVisible 1
+
+
+# - - - - - - - - - Bottom Leaf_Inf tip- - - - - - - - - - -
+
+/gate/QLT_INF/daughters/name QLT_INF_Tip_box
+/gate/QLT_INF/daughters/insert box
+/gate/QLT_INF_Tip_box/setMaterial Air
+/gate/QLT_INF_Tip_box/geometry/setXLength 180 mm
+/gate/QLT_INF_Tip_box/geometry/setYLength 1.2 mm
+/gate/QLT_INF_Tip_box/geometry/setZLength 0.5 mm
+/gate/QLT_INF_Tip_box/vis/setColor red
+/gate/QLT_INF_Tip_box/placement/setTranslation 0.0 -15.71 -0.16 mm 
+/gate/QLT_INF_Tip_box/placement/setRotationAxis 1 0 0    
+/gate/QLT_INF_Tip_box/placement/setRotationAngle 180 deg
+/gate/QLT_INF_Tip_box/vis/forceSolid 1
+/gate/QLT_INF_Tip_box/vis/setVisible 0
+
+/gate/QLT_INF_Tip_box/daughters/name QLT_INF_Tip
+/gate/QLT_INF_Tip_box/daughters/insert wedge
+/gate/QLT_INF_Tip/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/QLT_INF_Tip/geometry/setNarrowerXLength  176.6395084261950 mm
+/gate/QLT_INF_Tip/geometry/setXLength  176.8846187489392 mm
+/gate/QLT_INF_Tip/geometry/setYLength  1.2 mm
+/gate/QLT_INF_Tip/geometry/setZLength  0.5 mm
+/gate/QLT_INF_Tip/placement/setRotationAxis 0 1 0    
+/gate/QLT_INF_Tip/placement/setRotationAngle 180 deg
+/gate/QLT_INF_Tip/placement/setTranslation 1.618968206216451 0.0 0.0 mm 
+/gate/QLT_INF_Tip/vis/setColor red
+/gate/QLT_INF_Tip/vis/forceSolid 1
+/gate/QLT_INF_Tip/vis/setVisible 1
+
+
+##----------------Reapeater and motion-----------------------##
+
+
+/gate/QLT_INF/moves/insert genericRepeaterMove
+/gate/QLT_INF/genericRepeaterMove/setPlacementsFilename DIR/precise_QLT_INF.placements
+/gate/QLT_INF/genericRepeaterMove/useRelativeTranslation 1

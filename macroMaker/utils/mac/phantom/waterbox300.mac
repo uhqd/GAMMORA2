@@ -1,0 +1,13 @@
+
+# PHANTOM
+/gate/world/daughters/name patient
+/gate/world/daughters/insert box
+/gate/patient/setMaterial G4_WATER
+/gate/patient/placement/setTranslation 0.0 -150.0 0.0 mm
+/gate/patient/geometry/setXLength 300.0 mm
+/gate/patient/geometry/setYLength 300.0 mm
+/gate/patient/geometry/setZLength 300.0 mm
+/gate/patient/vis/setColor blue
+/gate/patient/vis/forceWireframe
+/gate/patient/vis/setVisible 1
+

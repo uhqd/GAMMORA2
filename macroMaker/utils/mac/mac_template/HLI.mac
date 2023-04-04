@@ -1,0 +1,287 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 				1_HALF-leaf Isocenter
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+# - - - - - - - - - -1_Half_leaf_isocenter1 SUPERIOR PART box- - - - - - - - - - - - - - - -
+# 
+/gate/MLCbox/daughters/name HLI_SUP1
+/gate/MLCbox/daughters/insert box
+/gate/HLI_SUP1/setMaterial Air
+/gate/HLI_SUP1/geometry/setXLength 180.0 mm
+/gate/HLI_SUP1/geometry/setYLength 32.5 mm
+/gate/HLI_SUP1/geometry/setZLength 2.1 mm
+/gate/HLI_SUP1/vis/setColor white
+/gate/HLI_SUP1/placement/setTranslation 180.0 0.0 0.0 mm 
+/gate/HLI_SUP1/vis/setVisible 0
+
+# 
+# 
+# 
+# - - - - - - - - - -1_Half_leaf_isocenter SUPERIOR_1 PART FORMED AS A WEDGE- - - - - - - - - - - - - - - - 
+
+
+/gate/HLI_SUP1/daughters/name Half_leaf_isocenter_SUP1
+/gate/HLI_SUP1/daughters/insert wedge
+
+
+/gate/Half_leaf_isocenter_SUP1/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Half_leaf_isocenter_SUP1/geometry/setNarrowerXLength  20.0 mm
+#/gate/Half_leaf_isocenter_SUP1/geometry/setXLength  156.24 mm
+/gate/Half_leaf_isocenter_SUP1/geometry/setXLength  176.908603971 mm
+/gate/Half_leaf_isocenter_SUP1/geometry/setYLength  31.3 mm
+/gate/Half_leaf_isocenter_SUP1/geometry/setZLength  2.1 mm
+/gate/Half_leaf_isocenter_SUP1/placement/setRotationAxis 0 0 1    
+/gate/Half_leaf_isocenter_SUP1/placement/setRotationAngle 180 deg
+
+/gate/Half_leaf_isocenter_SUP1/placement/setTranslation 40.772849007250002 -0.6 0.0 mm 
+/gate/Half_leaf_isocenter_SUP1/vis/setColor grey
+/gate/Half_leaf_isocenter_SUP1/vis/forceSolid 1
+/gate/Half_leaf_isocenter_SUP1/vis/setVisible 1
+# 
+# - - - - - - - - - 1_Half-leaf target isocenter_1 PART FORMED AS A PART OF A CYLINDER- - - - - - - - - - - 
+
+
+/gate/HLI_SUP1/daughters/name Half_leaf_isocenter_round_sup1
+/gate/HLI_SUP1/daughters/insert cylinder
+
+/gate/Half_leaf_isocenter_round_sup1/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Half_leaf_isocenter_round_sup1/geometry/setRmin 0 mm
+/gate/Half_leaf_isocenter_round_sup1/geometry/setRmax 160 mm
+/gate/Half_leaf_isocenter_round_sup1/geometry/setHeight 2.1 mm
+/gate/Half_leaf_isocenter_round_sup1/geometry/setPhiStart -11.2812366582 deg
+/gate/Half_leaf_isocenter_round_sup1/geometry/setDeltaPhi 11.2812366582 deg
+/gate/Half_leaf_isocenter_round_sup1/placement/setTranslation 70.0 -16.25 0.0 mm 
+/gate/Half_leaf_isocenter_round_sup1/placement/setRotationAxis 0 0 1
+/gate/Half_leaf_isocenter_round_sup1/placement/setRotationAngle 180 deg
+
+/gate/Half_leaf_isocenter_round_sup1/vis/setColor grey
+/gate/Half_leaf_isocenter_round_sup1/vis/forceSolid 1
+
+/gate/Half_leaf_isocenter_round_sup1/vis/setVisible 1
+# 
+# 
+# - - - - - - - - - -1_Half_leaf_isocenter SUPERIOR_1 PART Tip box FORMED AS A WEDGE- - - - - - - - - - - - - - - - 
+# 
+/gate/HLI_SUP1/daughters/name HLI_Tip_box #HLI Tip box to perform double rotation
+/gate/HLI_SUP1/daughters/insert box
+/gate/HLI_Tip_box/setMaterial Air
+/gate/HLI_Tip_box/geometry/setXLength 180.0 mm
+/gate/HLI_Tip_box/geometry/setYLength 1.2 mm
+/gate/HLI_Tip_box/geometry/setZLength 2.1 mm
+/gate/HLI_Tip_box/placement/setTranslation 0.0 15.65 0.0 mm 
+/gate/HLI_Tip_box/placement/setRotationAxis 1 0 0 
+/gate/HLI_Tip_box/placement/setRotationAngle 180 deg
+/gate/HLI_Tip_box/vis/setColor white 
+/gate/HLI_Tip_box/vis/setVisible 0
+
+
+/gate/HLI_Tip_box/daughters/name Half_leaf_isocenter_SUP1_Tip
+/gate/HLI_Tip_box/daughters/insert wedge
+
+
+/gate/Half_leaf_isocenter_SUP1_Tip/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Half_leaf_isocenter_SUP1_Tip/geometry/setNarrowerXLength  176.664450339 mm
+/gate/Half_leaf_isocenter_SUP1_Tip/geometry/setXLength  176.908603971 mm
+/gate/Half_leaf_isocenter_SUP1_Tip/geometry/setYLength  1.2 mm
+/gate/Half_leaf_isocenter_SUP1_Tip/geometry/setZLength  0.75 mm
+/gate/Half_leaf_isocenter_SUP1_Tip/placement/setRotationAxis 0 0 1    
+/gate/Half_leaf_isocenter_SUP1_Tip/placement/setRotationAngle 180 deg
+
+/gate/Half_leaf_isocenter_SUP1_Tip/placement/setTranslation 1.606736422499992 0.0 -0.675 mm 
+/gate/Half_leaf_isocenter_SUP1_Tip/vis/setColor grey
+/gate/Half_leaf_isocenter_SUP1_Tip/vis/forceSolid 1
+/gate/Half_leaf_isocenter_SUP1_Tip/vis/setVisible 1
+# 
+# - - - - - - - - - -1_Half_leaf_isocenter1 SUPEROIOR PART Repeater- - - - - - - - - - - - - - - - 
+
+/gate/HLI_SUP1/moves/insert genericRepeaterMove
+/gate/HLI_SUP1/genericRepeaterMove/setPlacementsFilename DIR/precise_HLI_SUP.placements
+/gate/HLI_SUP1/genericRepeaterMove/useRelativeTranslation 1
+
+
+#-------------ALLL HL INF---------------------
+#-------------ALLL HL INF---------------------
+#-------------ALLL HL INF---------------------
+
+/gate/MLCbox/daughters/name HLI_INFALL
+/gate/MLCbox/daughters/insert box
+/gate/HLI_INFALL/setMaterial Air
+/gate/HLI_INFALL/geometry/setXLength 180.0 mm
+/gate/HLI_INFALL/geometry/setYLength 34.5 mm
+/gate/HLI_INFALL/geometry/setZLength 2.9 mm
+/gate/HLI_INFALL/vis/setColor white
+/gate/HLI_INFALL/placement/setTranslation 180.0 0.0 0.0 mm 
+/gate/HLI_INFALL/vis/setVisible 0
+
+
+
+
+
+
+
+
+# - - - - - - - - - -1_Half_leaf_isocenter2 SUPERIOR PART box- - - - - - - - - - - - - - - -
+
+/gate/HLI_INFALL/daughters/name HLI_SUP2
+/gate/HLI_INFALL/daughters/insert box
+/gate/HLI_SUP2/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/HLI_SUP2/placement/setTranslation 0.0 17.05 0.2 mm
+/gate/HLI_SUP2/geometry/setXLength 180.0 mm
+/gate/HLI_SUP2/geometry/setYLength 0.4 mm
+/gate/HLI_SUP2/geometry/setZLength 2.5 mm
+/gate/HLI_SUP2/vis/setColor grey
+/gate/HLI_SUP2/vis/forceSolid 1
+/gate/HLI_SUP2/vis/setVisible 1
+
+
+# - - - - - - - - - -1_Half-leaf isocenter INFERIOR PART box- - - - - - - - - - - - - - - -
+
+/gate/HLI_INFALL/daughters/name HLI_INF
+/gate/HLI_INFALL/daughters/insert box
+/gate/HLI_INF/setMaterial Air
+/gate/HLI_INF/placement/setTranslation 0.0 -0.2 -0.0 mm
+/gate/HLI_INF/geometry/setXLength 180.0 mm
+/gate/HLI_INF/geometry/setYLength 34.1 mm
+/gate/HLI_INF/geometry/setZLength 2.9 mm
+/gate/HLI_INF/vis/setColor white
+/gate/HLI_INF/vis/setVisible 0
+
+
+
+
+# - - - - - - - - - -1_Half-leaf isocenter INFERIOR PART FORMED AS A WEDGE- - - - - - - - - - - - - - - - - 
+
+
+/gate/HLI_INF/daughters/name Half_leaf_isocenter_INF
+/gate/HLI_INF/daughters/insert wedge
+/gate/Half_leaf_isocenter_INF/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Half_leaf_isocenter_INF/geometry/setNarrowerXLength  20.0 mm
+#/gate/Half_leaf_isocenter_INF/geometry/setXLength  156.24 mm
+/gate/Half_leaf_isocenter_INF/geometry/setXLength  177.0660689009565 mm
+/gate/Half_leaf_isocenter_INF/geometry/setYLength  30.5 mm
+/gate/Half_leaf_isocenter_INF/geometry/setZLength  2.9 mm
+/gate/Half_leaf_isocenter_INF/placement/setRotationAxis 0 1 0    
+/gate/Half_leaf_isocenter_INF/placement/setRotationAngle 180 deg
+
+/gate/Half_leaf_isocenter_INF/placement/setTranslation 40.733482774760887 1.8 0.0 mm 
+/gate/Half_leaf_isocenter_INF/vis/setColor grey
+/gate/Half_leaf_isocenter_INF/vis/forceSolid 1
+/gate/Half_leaf_isocenter_INF/vis/setVisible 1
+
+/gate/Half_leaf_isocenter_INF/daughters/name Half_leaf_isocenter_INF_screwh
+/gate/Half_leaf_isocenter_INF/daughters/insert wedge
+/gate/Half_leaf_isocenter_INF_screwh/setMaterial Air
+/gate/Half_leaf_isocenter_INF_screwh/geometry/setNarrowerXLength  81.281515407157414 mm
+/gate/Half_leaf_isocenter_INF_screwh/geometry/setXLength  98.275549091495179 mm
+/gate/Half_leaf_isocenter_INF_screwh/geometry/setYLength  3.3 mm
+/gate/Half_leaf_isocenter_INF_screwh/geometry/setZLength  2.9 mm
+#/gate/Half_leaf_isocenter_INF_screwh/placement/setRotationAxis 0 1 0    
+#/gate/Half_leaf_isocenter_INF_screwh/placement/setRotationAngle 180 deg
+/gate/Half_leaf_isocenter_INF_screwh/placement/setTranslation -4.377251100575975 1.7 0.0 mm 
+/gate/Half_leaf_isocenter_INF_screwh/vis/setColor black
+/gate/Half_leaf_isocenter_INF_screwh/vis/forceSolid 1
+/gate/Half_leaf_isocenter_INF_screwh/vis/setVisible 1
+
+
+
+# - - - - - - - - - 1_Half-leaf target isocenter PART FORMED AS A PART OF A CYLINDER- - - - - - - - - - - 
+
+
+/gate/HLI_INF/daughters/name Half_leaf_isocenter_round_inf
+/gate/HLI_INF/daughters/insert cylinder
+
+/gate/Half_leaf_isocenter_round_inf/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Half_leaf_isocenter_round_inf/geometry/setRmin 0 mm
+/gate/Half_leaf_isocenter_round_inf/geometry/setRmax 160 mm
+/gate/Half_leaf_isocenter_round_inf/geometry/setHeight 2.9 mm
+/gate/Half_leaf_isocenter_round_inf/geometry/setPhiStart 0  deg
+/gate/Half_leaf_isocenter_round_inf/geometry/setDeltaPhi 10.9892607227 deg
+/gate/Half_leaf_isocenter_round_inf/placement/setTranslation 70.0 17.05 0.0 mm 
+/gate/Half_leaf_isocenter_round_inf/placement/setRotationAxis 0 0 1
+/gate/Half_leaf_isocenter_round_inf/placement/setRotationAngle 180 deg
+
+/gate/Half_leaf_isocenter_round_inf/vis/setColor grey
+/gate/Half_leaf_isocenter_round_inf/vis/forceSolid 1
+/gate/Half_leaf_isocenter_round_inf/vis/setVisible 1
+
+/gate/Half_leaf_isocenter_round_inf/daughters/name Half_leaf_isocenter_round_inf_screwhC
+/gate/Half_leaf_isocenter_round_inf/daughters/insert wedge
+/gate/Half_leaf_isocenter_round_inf_screwhC/setMaterial Air
+/gate/Half_leaf_isocenter_round_inf_screwhC/geometry/setNarrowerXLength  64.724450908504821 mm
+/gate/Half_leaf_isocenter_round_inf_screwhC/geometry/setXLength  81.718484592842586 mm
+/gate/Half_leaf_isocenter_round_inf_screwhC/geometry/setYLength  3.3 mm
+/gate/Half_leaf_isocenter_round_inf_screwhC/geometry/setZLength  2.9 mm
+/gate/Half_leaf_isocenter_round_inf_screwhC/placement/setRotationAxis 0 1 0    
+/gate/Half_leaf_isocenter_round_inf_screwhC/placement/setRotationAngle 180 deg
+/gate/Half_leaf_isocenter_round_inf_screwhC/placement/setTranslation 106.3892661246632 13.55 0.0 mm 
+/gate/Half_leaf_isocenter_round_inf_screwhC/vis/setColor black
+/gate/Half_leaf_isocenter_round_inf_screwhC/vis/forceSolid 1
+/gate/Half_leaf_isocenter_round_inf_screwhC/vis/setVisible 1
+# 
+
+
+
+
+# - - - - - - - - - 1_Half-leaf target isocenter inferior part wedge tip- - - - - - - - - - - 
+
+/gate/HLI_INF/daughters/name Half_leaf_isocenter_Inf1_Tip
+/gate/HLI_INF/daughters/insert wedge
+
+
+/gate/Half_leaf_isocenter_Inf1_Tip/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Half_leaf_isocenter_Inf1_Tip/geometry/setNarrowerXLength  176.5387811374549 mm
+/gate/Half_leaf_isocenter_Inf1_Tip/geometry/setXLength  177.0660689009565 mm
+/gate/Half_leaf_isocenter_Inf1_Tip/geometry/setYLength  2.6 mm
+/gate/Half_leaf_isocenter_Inf1_Tip/geometry/setZLength  1.49 mm
+/gate/Half_leaf_isocenter_Inf1_Tip/placement/setRotationAxis 0 0 1    
+/gate/Half_leaf_isocenter_Inf1_Tip/placement/setRotationAngle 180 deg
+
+/gate/Half_leaf_isocenter_Inf1_Tip/placement/setTranslation 1.598787490397157 -14.75 -0.705 mm 
+/gate/Half_leaf_isocenter_Inf1_Tip/vis/setColor grey
+/gate/Half_leaf_isocenter_Inf1_Tip/vis/forceSolid 1
+/gate/Half_leaf_isocenter_Inf1_Tip/vis/setVisible 1
+
+# - - - - - - - - - 1_Half-leaf target isocenter inferior part wedge hole- - - - - - - - - - - 
+
+/gate/HLI_INF/daughters/name Half_leaf_isocenter_Inf1_hole
+/gate/HLI_INF/daughters/insert wedge
+
+
+/gate/Half_leaf_isocenter_Inf1_hole/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Half_leaf_isocenter_Inf1_hole/geometry/setNarrowerXLength  176.3239904813078 mm
+/gate/Half_leaf_isocenter_Inf1_hole/geometry/setXLength  176.5387811374549 mm
+/gate/Half_leaf_isocenter_Inf1_hole/geometry/setYLength  1.0 mm
+/gate/Half_leaf_isocenter_Inf1_hole/geometry/setZLength  2.9 mm
+/gate/Half_leaf_isocenter_Inf1_hole/placement/setRotationAxis 0 0 1    
+/gate/Half_leaf_isocenter_Inf1_hole/placement/setRotationAngle 180 deg
+
+/gate/Half_leaf_isocenter_Inf1_hole/placement/setTranslation 1.765387811374549 -16.55 0 mm 
+/gate/Half_leaf_isocenter_Inf1_hole/vis/setColor grey
+/gate/Half_leaf_isocenter_Inf1_hole/vis/forceSolid 1
+/gate/Half_leaf_isocenter_Inf1_hole/vis/setVisible 1
+# - - - - - - - - - -ALLL HL INF Repeater- - - - - - - - - - - - - - - - 
+
+/gate/HLI_INFALL/moves/insert genericRepeaterMove
+/gate/HLI_INFALL/genericRepeaterMove/setPlacementsFilename DIR/precise_HLI_INF.placements
+/gate/HLI_INFALL/genericRepeaterMove/useRelativeTranslation 1
+
+

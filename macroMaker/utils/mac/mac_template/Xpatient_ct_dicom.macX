@@ -1,0 +1,17 @@
+# Patient from DICOM CT Slices
+# TO FIX
+
+/gate/world/daughters/name                patient
+/gate/world/daughters/insert              ImageNestedParametrisedpatient
+/gate/geometry/setMaterialDatabase              DATA_DIR/patient-HUmaterials.db
+/gate/patient/geometry/setHUToMaterialFile      DATA_DIR/patient-HU2mat.txt
+
+# First Slice
+/gate/patient/geometry/setImage                 DICOM_CT_DIR/FIRST_DICOM_SLICE.dcm
+
+/gate/patient/placement/setRotationAxis 1 0 0
+/gate/patient/placement/setRotationAngle 180 deg
+
+#/gate/patient/geometry/TranslateTheImageAtThisIsoCenter isox isoy isoz mm     # TO FIX 
+/gate/patient/geometry/buildAndDumpDensityImage output/density-image.mhd
+/gate/patient/placement/setTranslation          -0.1 0. 0. mm # GEANT4 bug bypass

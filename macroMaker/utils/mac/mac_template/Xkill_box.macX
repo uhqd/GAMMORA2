@@ -1,0 +1,82 @@
+#-------------------------------------------------------------------------------------------#
+#										 KILLBOX
+#-------------------------------------------------------------------------------------------#
+
+/gate/myLinacHead/daughters/name killPlane1
+/gate/myLinacHead/daughters/insert box
+/gate/killPlane1/setMaterial Air
+/gate/killPlane1/geometry/setXLength 50 cm  
+/gate/killPlane1/geometry/setYLength 1 um
+/gate/killPlane1/geometry/setZLength 30 cm
+/gate/killPlane1/placement/setRotationAxis 1 0 0
+/gate/killPlane1/placement/setRotationAngle 90.0 deg
+/gate/killPlane1/placement/setTranslation 0.0 -30 -25.0 cm
+/gate/killPlane1/vis/setVisible 1
+
+/gate/myLinacHead/daughters/name killPlane2
+/gate/myLinacHead/daughters/insert box
+/gate/killPlane2/setMaterial Air
+/gate/killPlane2/geometry/setXLength 50 cm  
+/gate/killPlane2/geometry/setYLength 1 um
+/gate/killPlane2/geometry/setZLength 30 cm
+/gate/killPlane2/placement/setRotationAxis 1 0 0
+/gate/killPlane2/placement/setRotationAngle 90.0 deg
+/gate/killPlane2/placement/setTranslation 0.0 -30 25.0 cm
+/gate/killPlane2/vis/setVisible 1
+
+/gate/myLinacHead/daughters/name killPlane3
+/gate/myLinacHead/daughters/insert box
+/gate/killPlane3/setMaterial Air
+/gate/killPlane3/geometry/setXLength 30 cm  
+/gate/killPlane3/geometry/setYLength 1 um
+/gate/killPlane3/geometry/setZLength 50 cm
+/gate/killPlane3/placement/setRotationAxis 0 0 1
+/gate/killPlane3/placement/setRotationAngle 90.0 deg
+/gate/killPlane3/placement/setTranslation 25.0 -30 0.0 cm
+/gate/killPlane3/vis/setVisible 1
+
+/gate/myLinacHead/daughters/name killPlane4
+/gate/myLinacHead/daughters/insert box
+/gate/killPlane4/setMaterial Air
+/gate/killPlane4/geometry/setXLength 30 cm  
+/gate/killPlane4/geometry/setYLength 1 um
+/gate/killPlane4/geometry/setZLength 50 cm
+/gate/killPlane4/placement/setRotationAxis 0 0 1
+/gate/killPlane4/placement/setRotationAngle 90.0 deg
+/gate/killPlane4/placement/setTranslation -25 -30.0 0.0 cm
+/gate/killPlane4/vis/setVisible 1
+
+/gate/myLinacHead/daughters/name killPlane5
+/gate/myLinacHead/daughters/insert box
+/gate/killPlane5/setMaterial Air
+/gate/killPlane5/geometry/setXLength 50 cm  
+/gate/killPlane5/geometry/setYLength 1 um
+/gate/killPlane5/geometry/setZLength 50 cm
+/gate/killPlane5/placement/setTranslation 0.0 -15.0 0.0 cm
+/gate/killPlane5/vis/setVisible 1
+
+#________________________________________________________________________________________________
+
+
+/gate/actor/addActor KillActor killer1
+/gate/actor/addActor KillActor killer2
+/gate/actor/addActor KillActor killer3
+/gate/actor/addActor KillActor killer4
+/gate/actor/addActor KillActor killer5
+
+/gate/actor/killer1/attachTo killPlane1
+/gate/actor/killer2/attachTo killPlane2
+/gate/actor/killer3/attachTo killPlane3
+/gate/actor/killer4/attachTo killPlane4
+/gate/actor/killer5/attachTo killPlane5
+
+/gate/actor/killer1/save output/killer1.txt
+/gate/actor/killer2/save output/killer2.txt
+/gate/actor/killer3/save output/killer3.txt
+/gate/actor/killer4/save output/killer4.txt
+/gate/actor/killer5/save output/killer5.txt
+
+
+
+
+#________________________________________________________________________________________________

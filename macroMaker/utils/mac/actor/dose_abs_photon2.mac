@@ -1,0 +1,23 @@
+# raw image can be opened with following options in Image J
+# 32 bits reals Little endian
+# W = sizex/voxelx  H = SizeY/voxelY Number of images SizeZ/voxelZ
+
+/gate/actor/addActor DoseActor doseDistribution
+/gate/actor/doseDistribution/save {out}/myDose.mhd
+/gate/actor/doseDistribution/attachTo patient
+/gate/actor/doseDistribution/stepHitType random
+
+/gate/actor/doseDistribution/setSize 300 300 300 mm
+/gate/actor/doseDistribution/setResolution 240 240 240
+
+/gate/actor/doseDistribution/enableDose            true
+/gate/actor/doseDistribution/enableUncertaintyDose true
+
+#/gate/actor/doseDistribution/enableEdep            true
+#/gate/actor/doseDistribution/enableUncertaintyEdep true
+
+/gate/actor/doseDistribution/enableDoseToWater true
+/gate/actor/doseDistribution/enableUncertaintyDoseToWater true
+
+
+/gate/actor/doseDistribution/saveEveryNSeconds     2000

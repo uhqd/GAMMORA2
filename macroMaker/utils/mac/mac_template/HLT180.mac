@@ -1,0 +1,294 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 			 			HALF-leaf-RIGHT
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 				1_HALF-leaf target
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+# - - - - - - - - - -1_Half_leaf_target SUPERIOR PART box- - - - - - - - - - - - - - - - 
+
+/gate/MLCbox/daughters/name HLT_SUP180S
+/gate/MLCbox/daughters/insert box
+/gate/HLT_SUP180S/setMaterial Air
+/gate/HLT_SUP180S/geometry/setXLength 180.0 mm
+/gate/HLT_SUP180S/geometry/setYLength 34.8 mm
+/gate/HLT_SUP180S/geometry/setZLength 2.89 mm
+/gate/HLT_SUP180S/placement/setTranslation 0.0 0.05 0.0 mm 
+/gate/HLT_SUP180S/vis/setColor white
+/gate/HLT_SUP180S/vis/setVisible 0
+
+/gate/HLT_SUP180S/daughters/name HLT_SUP180
+/gate/HLT_SUP180S/daughters/insert box
+/gate/HLT_SUP180/setMaterial Air
+/gate/HLT_SUP180/geometry/setXLength 180.0 mm
+/gate/HLT_SUP180/geometry/setYLength 34.8 mm
+/gate/HLT_SUP180/geometry/setZLength 2.89 mm
+/gate/HLT_SUP180/vis/setColor white
+/gate/HLT_SUP180/placement/setTranslation 0.0 0.0 0.0 mm 
+/gate/HLT_SUP180/placement/setRotationAxis 0 1 0 
+/gate/HLT_SUP180/placement/setRotationAngle 180 deg
+/gate/HLT_SUP180/vis/setVisible 0
+
+
+
+
+# - - - - - - - - - -1_Half_leaf_target SUPERIOR PART FORMED AS A WEDGE- - - - - - - - - - - - - - - - 
+
+/gate/HLT_SUP180/daughters/name Half_leaf_target_SUP180
+/gate/HLT_SUP180/daughters/insert wedge
+/gate/Half_leaf_target_SUP180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Half_leaf_target_SUP180/geometry/setNarrowerXLength  20.0 mm
+/gate/Half_leaf_target_SUP180/geometry/setXLength  176.9483673059392 mm
+/gate/Half_leaf_target_SUP180/geometry/setYLength  31.1 mm
+/gate/Half_leaf_target_SUP180/geometry/setZLength  2.89 mm
+/gate/Half_leaf_target_SUP180/placement/setRotationAxis 0 0 1    
+/gate/Half_leaf_target_SUP180/placement/setRotationAngle 180 deg
+/gate/Half_leaf_target_SUP180/placement/setTranslation 40.762908173515200 -1.75 0.0 mm 
+/gate/Half_leaf_target_SUP180/vis/setColor white
+/gate/Half_leaf_target_SUP180/vis/forceSolid 1
+/gate/Half_leaf_target_SUP180/vis/setVisible 1
+
+
+/gate/Half_leaf_target_SUP180/daughters/name Half_leaf_target_SUP_screwhW180
+/gate/Half_leaf_target_SUP180/daughters/insert wedge
+/gate/Half_leaf_target_SUP_screwhW180/setMaterial Air
+/gate/Half_leaf_target_SUP_screwhW180/geometry/setNarrowerXLength  72.988998608157445 mm
+/gate/Half_leaf_target_SUP_screwhW180/geometry/setXLength  89.642683885006932 mm
+/gate/Half_leaf_target_SUP_screwhW180/geometry/setYLength  3.3 mm
+/gate/Half_leaf_target_SUP_screwhW180/geometry/setZLength  2.89 mm
+/gate/Half_leaf_target_SUP_screwhW180/placement/setTranslation -8.579171203193710 3.4 0.0 mm 
+/gate/Half_leaf_target_SUP_screwhW180/vis/setColor black
+/gate/Half_leaf_target_SUP_screwhW180/vis/forceSolid 1
+/gate/Half_leaf_target_SUP_screwhW180/vis/setVisible 1
+
+
+# - - - - - - - - - 1_Half-leaf target SUPERIOR PART FORMED AS A PART OF A CYLINDER- - - - - - - - - - - 
+
+
+/gate/HLT_SUP180/daughters/name Half_leaf_target_round_sup180
+/gate/HLT_SUP180/daughters/insert cylinder
+/gate/Half_leaf_target_round_sup180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Half_leaf_target_round_sup180/geometry/setRmin 0 mm
+/gate/Half_leaf_target_round_sup180/geometry/setRmax 160 mm
+/gate/Half_leaf_target_round_sup180/geometry/setHeight 2.89 mm
+/gate/Half_leaf_target_round_sup180/geometry/setPhiStart -11.2082151522 deg
+/gate/Half_leaf_target_round_sup180/geometry/setDeltaPhi 11.2082151522 deg
+/gate/Half_leaf_target_round_sup180/placement/setTranslation 70 -17.3 0.0 mm 
+/gate/Half_leaf_target_round_sup180/placement/setRotationAxis 0 0 1
+/gate/Half_leaf_target_round_sup180/placement/setRotationAngle 180 deg
+/gate/Half_leaf_target_round_sup180/vis/setColor white
+/gate/Half_leaf_target_round_sup180/vis/forceSolid 1
+/gate/Half_leaf_target_round_sup180/vis/setVisible 1
+
+
+/gate/Half_leaf_target_round_sup180/daughters/name Half_leaf_target_round_sup_screwhC180
+/gate/Half_leaf_target_round_sup180/daughters/insert wedge
+/gate/Half_leaf_target_round_sup_screwhC180/setMaterial Air
+/gate/Half_leaf_target_round_sup_screwhC180/geometry/setNarrowerXLength  73.357316114993068 mm
+/gate/Half_leaf_target_round_sup_screwhC180/geometry/setXLength  90.011001391842555 mm
+/gate/Half_leaf_target_round_sup_screwhC180/geometry/setYLength  3.3 mm
+/gate/Half_leaf_target_round_sup_screwhC180/geometry/setZLength  2.89 mm
+/gate/Half_leaf_target_round_sup_screwhC180/placement/setRotationAxis 0 0 1    
+/gate/Half_leaf_target_round_sup_screwhC180/placement/setRotationAngle 180 deg
+/gate/Half_leaf_target_round_sup_screwhC180/placement/setTranslation  102.1579206232911 -12.15 0.0 mm 
+/gate/Half_leaf_target_round_sup_screwhC180/vis/setColor black
+/gate/Half_leaf_target_round_sup_screwhC180/vis/forceSolid 1
+/gate/Half_leaf_target_round_sup_screwhC180/vis/setVisible 1
+
+# - - - - - - - - - 1_Half-leaf target inferior tip- - - - - - - - - - -
+
+/gate/HLT_SUP180/daughters/name ITip_HLT_SUP180
+/gate/HLT_SUP180/daughters/insert box
+/gate/ITip_HLT_SUP180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/ITip_HLT_SUP180/geometry/setXLength 180.0 mm
+/gate/ITip_HLT_SUP180/geometry/setYLength 0.1 mm
+/gate/ITip_HLT_SUP180/geometry/setZLength 2.49 mm
+/gate/ITip_HLT_SUP180/placement/setTranslation 0.0 -17.35 -0.2 mm 
+/gate/ITip_HLT_SUP180/vis/setColor white
+/gate/ITip_HLT_SUP180/vis/forceSolid 1
+/gate/ITip_HLT_SUP180/vis/setVisible 1
+
+# - - - - - - - - - 1_Half-leaf target superior Hole- - - - - - - - - - -
+/gate/HLT_SUP180/daughters/name Hole_HLT_SUP_box180
+/gate/HLT_SUP180/daughters/insert box
+/gate/Hole_HLT_SUP_box180/setMaterial Air
+/gate/Hole_HLT_SUP_box180/geometry/setXLength 180.0 mm
+/gate/Hole_HLT_SUP_box180/geometry/setYLength 2.6 mm
+/gate/Hole_HLT_SUP_box180/geometry/setZLength 2.89 mm
+/gate/Hole_HLT_SUP_box180/placement/setRotationAxis 1 0 0    
+/gate/Hole_HLT_SUP_box180/placement/setRotationAngle 180 deg
+/gate/Hole_HLT_SUP_box180/placement/setTranslation 0.0 15.1 0.0 mm
+/gate/Hole_HLT_SUP_box180/vis/setVisible 0
+
+
+/gate/Hole_HLT_SUP_box180/daughters/name Hole_HLT_SUP180
+/gate/Hole_HLT_SUP_box180/daughters/insert wedge
+/gate/Hole_HLT_SUP180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Hole_HLT_SUP180/geometry/setNarrowerXLength  176.4107093520134 mm
+/gate/Hole_HLT_SUP180/geometry/setXLength  176.9483673059392 mm
+/gate/Hole_HLT_SUP180/geometry/setYLength  2.6 mm
+/gate/Hole_HLT_SUP180/geometry/setZLength  1.52 mm
+/gate/Hole_HLT_SUP180/placement/setRotationAxis 0 0 1    
+/gate/Hole_HLT_SUP180/placement/setRotationAngle 180 deg
+/gate/Hole_HLT_SUP180/placement/setTranslation 1.660230835511854 0.0 -0.685 mm
+/gate/Hole_HLT_SUP180/vis/setColor white
+/gate/Hole_HLT_SUP180/vis/forceSolid 1
+/gate/Hole_HLT_SUP180/vis/setVisible 1
+# 
+# 
+# 
+# - - - - - - - - - 1_Half-leaf target superior TIP- - - - - - - - - - -
+# 
+/gate/HLT_SUP180/daughters/name STip_HLT_SUP_box180
+/gate/HLT_SUP180/daughters/insert box
+/gate/STip_HLT_SUP_box180/setMaterial Air
+/gate/STip_HLT_SUP_box180/geometry/setXLength 180 mm
+/gate/STip_HLT_SUP_box180/geometry/setYLength 1.0 mm
+/gate/STip_HLT_SUP_box180/geometry/setZLength 2.89 mm
+/gate/STip_HLT_SUP_box180/placement/setTranslation 0.0 16.9 0.0 mm 
+/gate/STip_HLT_SUP_box180/placement/setRotationAxis 1 0 0    
+/gate/STip_HLT_SUP_box180/placement/setRotationAngle 180 deg
+/gate/STip_HLT_SUP_box180/vis/setColor red
+/gate/STip_HLT_SUP_box180/vis/forceSolid 0
+/gate/STip_HLT_SUP_box180/vis/setVisible 0
+
+
+/gate/STip_HLT_SUP_box180/daughters/name STip_HLT_SUP180
+/gate/STip_HLT_SUP_box180/daughters/insert wedge
+/gate/STip_HLT_SUP180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/STip_HLT_SUP180/geometry/setNarrowerXLength  176.1696513410976 mm
+/gate/STip_HLT_SUP180/geometry/setXLength  176.4107093520134 mm
+/gate/STip_HLT_SUP180/geometry/setYLength  1.0 mm
+/gate/STip_HLT_SUP180/geometry/setZLength  2.89 mm
+/gate/STip_HLT_SUP180/placement/setRotationAxis 0 0 1    
+/gate/STip_HLT_SUP180/placement/setRotationAngle 180 deg
+/gate/STip_HLT_SUP180/placement/setTranslation 1.854909826722249 0.0 0.0 mm
+/gate/STip_HLT_SUP180/vis/setColor white
+/gate/STip_HLT_SUP180/vis/forceSolid 1
+/gate/STip_HLT_SUP180/vis/setVisible 1
+# 
+# - - - - - - - - - -1_Half_leaf_target SUPERIOR PART Repeater- - - - - - - - - - - - - - - - 
+# 
+/gate/HLT_SUP180S/moves/insert genericRepeaterMove
+/gate/HLT_SUP180S/genericRepeaterMove/setPlacementsFilename DIR/precise_HLT_SUP180.placements
+/gate/HLT_SUP180S/genericRepeaterMove/useRelativeTranslation 1
+# 
+# 
+# - - - - - - - - - -1_Half_leaf_target INFERIOR PART box- - - - - - - - - - - - - - - - 
+
+
+
+/gate/MLCbox/daughters/name HLT_INF180S
+/gate/MLCbox/daughters/insert box
+/gate/HLT_INF180S/setMaterial Air
+/gate/HLT_INF180S/geometry/setXLength 180.0 mm
+/gate/HLT_INF180S/geometry/setYLength 32.2 mm
+/gate/HLT_INF180S/geometry/setZLength 2.09 mm
+/gate/HLT_INF180S/vis/setColor white
+/gate/HLT_INF180S/placement/setTranslation 0.0 0.05 0.0 mm 
+/gate/HLT_INF180S/vis/setVisible 0
+
+/gate/HLT_INF180S/daughters/name HLT_INF180
+/gate/HLT_INF180S/daughters/insert box
+/gate/HLT_INF180/setMaterial Air
+/gate/HLT_INF180/geometry/setXLength 180.0 mm
+/gate/HLT_INF180/geometry/setYLength 32.2 mm
+/gate/HLT_INF180/geometry/setZLength 2.09 mm
+/gate/HLT_INF180/vis/setColor white
+/gate/HLT_INF180/placement/setTranslation 0.0 0.0 0.0 mm 
+/gate/HLT_INF180/placement/setRotationAxis 0 1 0 
+/gate/HLT_INF180/placement/setRotationAngle 180 deg
+/gate/HLT_INF180/vis/setVisible 0
+
+# 
+# - - - - - - - - - -1_Half-leaf target INFERIOR PART FORMED AS A WEDGE- - - - - - - - - - - - - - - - - 
+# 
+
+/gate/HLT_INF180/daughters/name Half_leaf_target_INF180
+/gate/HLT_INF180/daughters/insert wedge
+/gate/Half_leaf_target_INF180/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Half_leaf_target_INF180/geometry/setNarrowerXLength  20.0 mm
+/gate/Half_leaf_target_INF180/geometry/setXLength  176.9681496355232 mm
+/gate/Half_leaf_target_INF180/geometry/setYLength  31.0 mm
+/gate/Half_leaf_target_INF180/geometry/setZLength  2.09 mm
+/gate/Half_leaf_target_INF180/placement/setRotationAxis 0 1 0    
+/gate/Half_leaf_target_INF180/placement/setRotationAngle 180 deg
+/gate/Half_leaf_target_INF180/placement/setTranslation 40.757962591119203 0.6 0.0 mm 
+/gate/Half_leaf_target_INF180/vis/setColor white
+/gate/Half_leaf_target_INF180/vis/forceSolid 1
+/gate/Half_leaf_target_INF180/vis/setVisible 1
+
+# 
+# - - - - - - - - - 1_Half-leaf target INFERIOR PART FORMED AS A PART OF A CYLINDER- - - - - - - - - - - 
+# 
+# 
+/gate/HLT_INF180/daughters/name Hald_leaf_target_round_inf180
+/gate/HLT_INF180/daughters/insert cylinder
+
+/gate/Hald_leaf_target_round_inf180/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/Hald_leaf_target_round_inf180/geometry/setRmin 0 mm
+/gate/Hald_leaf_target_round_inf180/geometry/setRmax 160 mm
+/gate/Hald_leaf_target_round_inf180/geometry/setHeight 2.09 mm
+/gate/Hald_leaf_target_round_inf180/geometry/setPhiStart 0  deg
+/gate/Hald_leaf_target_round_inf180/geometry/setDeltaPhi 11.1717113211 deg
+/gate/Hald_leaf_target_round_inf180/placement/setTranslation 70.0 16.1 0.0 mm 
+/gate/Hald_leaf_target_round_inf180/placement/setRotationAxis 0 0 1
+/gate/Hald_leaf_target_round_inf180/placement/setRotationAngle 180 deg
+
+/gate/Hald_leaf_target_round_inf180/vis/setColor white
+/gate/Hald_leaf_target_round_inf180/vis/forceSolid 1
+/gate/Hald_leaf_target_round_inf180/vis/setVisible 1
+# 
+# 
+# - - - - - - - - - 1_Half-leaf target Inferior TIP- - - - - - - - - - -
+# 
+/gate/HLT_INF180/daughters/name Tip_HLT_Inf_box180
+/gate/HLT_INF180/daughters/insert box
+/gate/Tip_HLT_Inf_box180/setMaterial Air
+/gate/Tip_HLT_Inf_box180/geometry/setXLength 180 mm
+/gate/Tip_HLT_Inf_box180/geometry/setYLength 1.2 mm
+/gate/Tip_HLT_Inf_box180/geometry/setZLength 1.05 mm
+/gate/Tip_HLT_Inf_box180/placement/setTranslation 0.0 -15.5 -0.52 mm 
+/gate/Tip_HLT_Inf_box180/vis/setColor red
+/gate/Tip_HLT_Inf_box180/vis/forceSolid 0
+/gate/Tip_HLT_Inf_box180/vis/setVisible 0
+
+
+/gate/Tip_HLT_Inf_box180/daughters/name Tip_HLT_Inf180
+/gate/Tip_HLT_Inf_box180/daughters/insert wedge
+/gate/Tip_HLT_Inf180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/Tip_HLT_Inf180/geometry/setNarrowerXLength  176.7263857810803 mm
+/gate/Tip_HLT_Inf180/geometry/setXLength  176.9681496355232 mm
+/gate/Tip_HLT_Inf180/geometry/setYLength  1.2 mm
+/gate/Tip_HLT_Inf180/geometry/setZLength  1.05 mm
+/gate/Tip_HLT_Inf180/placement/setRotationAxis 0 0 1    
+/gate/Tip_HLT_Inf180/placement/setRotationAngle 180 deg
+/gate/Tip_HLT_Inf180/placement/setTranslation 1.576366145849121 0.0 0.0 mm
+/gate/Tip_HLT_Inf180/vis/setColor white
+/gate/Tip_HLT_Inf180/vis/forceSolid 1
+/gate/Tip_HLT_Inf180/vis/setVisible 1
+# 
+# 
+# 
+# 
+# - - - - - - - - - -1_Half_leaf_target INFERIOR PART Repeater- - - - - - - - - - - - - - - - 
+# 
+/gate/HLT_INF180S/moves/insert genericRepeaterMove
+/gate/HLT_INF180S/genericRepeaterMove/setPlacementsFilename DIR/precise_HLT_INF180.placements
+/gate/HLT_INF180S/genericRepeaterMove/useRelativeTranslation 1

@@ -1,0 +1,266 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# 				1_OUTBOARD LEAF#1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+
+
+# - - - - - - - - - -1_OUTBOARD SUPERIOR PART box- - - - - - - - - - - - - - - - 
+
+
+
+/gate/MLCbox/daughters/name OL1_SUP180S
+/gate/MLCbox/daughters/insert box
+/gate/OL1_SUP180S/setMaterial Air
+/gate/OL1_SUP180S/geometry/setXLength 180.0 mm
+/gate/OL1_SUP180S/geometry/setYLength 34.8 mm
+/gate/OL1_SUP180S/geometry/setZLength 4.3 mm
+/gate/OL1_SUP180S/placement/setRotationAxis 1 0 0    
+/gate/OL1_SUP180S/placement/setRotationAngle 5.010593138 deg
+/gate/OL1_SUP180S/placement/setTranslation -90.0 17.93350707039790000000 -56 mm #-55.3602853424193 mm 
+/gate/OL1_SUP180S/vis/setColor white
+/gate/OL1_SUP180S/vis/setVisible 0
+
+/gate/OL1_SUP180S/daughters/name OL1_SUP1_180
+/gate/OL1_SUP180S/daughters/insert box
+/gate/OL1_SUP1_180/setMaterial Air
+/gate/OL1_SUP1_180/geometry/setXLength 180.0 mm
+/gate/OL1_SUP1_180/geometry/setYLength 34.8 mm
+/gate/OL1_SUP1_180/geometry/setZLength 4.3 mm
+/gate/OL1_SUP1_180/vis/setColor white
+/gate/OL1_SUP1_180/placement/setTranslation 0.0 0.0 0.0 mm 
+/gate/OL1_SUP1_180/placement/setRotationAxis 0 1 0 
+/gate/OL1_SUP1_180/placement/setRotationAngle 180 deg
+/gate/OL1_SUP1_180/vis/setVisible 0
+
+
+
+
+
+# - - - - - - - - - -1_OUTBOARD SUPERIOR PART FORMED AS A WEDGE- - - - - - - - - - - - - - - - 
+
+/gate/OL1_SUP1_180/daughters/name OL1_LEFT_180
+/gate/OL1_SUP1_180/daughters/insert wedge
+
+
+/gate/OL1_LEFT_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/OL1_LEFT_180/geometry/setNarrowerXLength  20.0 mm
+#/gate/OL1_LEFT_180/geometry/setXLength  156.24 mm
+/gate/OL1_LEFT_180/geometry/setXLength  177.513142309 mm
+/gate/OL1_LEFT_180/geometry/setYLength  28.1 mm
+/gate/OL1_LEFT_180/geometry/setZLength  4.3 mm
+/gate/OL1_LEFT_180/placement/setRotationAxis 0 0 1    
+/gate/OL1_LEFT_180/placement/setRotationAngle 180 deg
+
+/gate/OL1_LEFT_180/placement/setTranslation 40.6217144227 -3.35 0.0 mm 
+/gate/OL1_LEFT_180/vis/setColor white
+/gate/OL1_LEFT_180/vis/forceSolid 1
+/gate/OL1_LEFT_180/vis/setVisible 1
+
+# - - - - - - - - - 1_OUTBOARD SUPERIOR PART FORMED AS A PART OF A CYLINDER- - - - - - - - - - - 
+# 
+# 
+/gate/OL1_SUP1_180/daughters/name OL1_round_sup_LEFT_180
+/gate/OL1_SUP1_180/daughters/insert cylinder
+
+/gate/OL1_round_sup_LEFT_180/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/OL1_round_sup_LEFT_180/geometry/setRmin 0 mm
+/gate/OL1_round_sup_LEFT_180/geometry/setRmax 160 mm
+/gate/OL1_round_sup_LEFT_180/geometry/setHeight 4.3 mm
+/gate/OL1_round_sup_LEFT_180/geometry/setPhiStart -10.115031288 deg
+/gate/OL1_round_sup_LEFT_180/geometry/setDeltaPhi  10.115031288 deg
+/gate/OL1_round_sup_LEFT_180/placement/setTranslation 70 -17.4 0.0 mm 
+/gate/OL1_round_sup_LEFT_180/placement/setRotationAxis 0 0 1
+/gate/OL1_round_sup_LEFT_180/placement/setRotationAngle 180 deg
+
+/gate/OL1_round_sup_LEFT_180/vis/setColor white
+/gate/OL1_round_sup_LEFT_180/vis/forceSolid 1
+/gate/OL1_round_sup_LEFT_180/vis/setVisible 1
+
+
+#box to hold all tip wedges
+/gate/OL1_SUP1_180/daughters/name boxsupOL1_SUP_180
+/gate/OL1_SUP1_180/daughters/insert box
+/gate/boxsupOL1_SUP_180/setMaterial Air
+/gate/boxsupOL1_SUP_180/placement/setTranslation 0.0 14.05 0 mm
+/gate/boxsupOL1_SUP_180/geometry/setXLength 180.0 mm
+/gate/boxsupOL1_SUP_180/geometry/setYLength 6.7 mm
+/gate/boxsupOL1_SUP_180/geometry/setZLength 4.3 mm
+/gate/boxsupOL1_SUP_180/placement/setRotationAxis 1 0 0    
+/gate/boxsupOL1_SUP_180/placement/setRotationAngle 180 deg
+/gate/boxsupOL1_SUP_180/vis/setColor white
+/gate/boxsupOL1_SUP_180/vis/setVisible 0
+# 
+# 
+# #Tip1
+# 
+/gate/boxsupOL1_SUP_180/daughters/name OL1_LEFTtipwedge1_180
+/gate/boxsupOL1_SUP_180/daughters/insert wedge
+/gate/OL1_LEFTtipwedge1_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/OL1_LEFTtipwedge1_180/geometry/setNarrowerXLength  176.928518759 mm
+/gate/OL1_LEFTtipwedge1_180/geometry/setXLength  177.513142309 mm
+/gate/OL1_LEFTtipwedge1_180/geometry/setYLength  3.1 mm
+/gate/OL1_LEFTtipwedge1_180/geometry/setZLength  2.72 mm
+/gate/OL1_LEFTtipwedge1_180/placement/setRotationAxis 0 0 1    
+/gate/OL1_LEFTtipwedge1_180/placement/setRotationAngle 180 deg
+/gate/OL1_LEFTtipwedge1_180/placement/setTranslation 1.389584733000007 1.8 0.79 mm 
+/gate/OL1_LEFTtipwedge1_180/vis/setColor white
+/gate/OL1_LEFTtipwedge1_180/vis/forceSolid 1
+/gate/OL1_LEFTtipwedge1_180/vis/setVisible 1
+
+
+
+##Tip2
+/gate/boxsupOL1_SUP_180/daughters/name OL1_LEFTtipwedge2_180
+/gate/boxsupOL1_SUP_180/daughters/insert wedge
+/gate/OL1_LEFTtipwedge2_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/OL1_LEFTtipwedge2_180/geometry/setNarrowerXLength  176.3891300570471 mm
+/gate/OL1_LEFTtipwedge2_180/geometry/setXLength  176.928518759 mm
+/gate/OL1_LEFTtipwedge2_180/geometry/setYLength  2.6 mm
+/gate/OL1_LEFTtipwedge2_180/geometry/setZLength  1.35 mm
+/gate/OL1_LEFTtipwedge2_180/placement/setRotationAxis 0 0 1    
+/gate/OL1_LEFTtipwedge2_180/placement/setRotationAngle 180 deg
+/gate/OL1_LEFTtipwedge2_180/placement/setTranslation  1.670587795988212 -1.05 0.105 mm 
+/gate/OL1_LEFTtipwedge2_180/vis/setColor white
+/gate/OL1_LEFTtipwedge2_180/vis/forceSolid 1
+/gate/OL1_LEFTtipwedge2_180/vis/setVisible 1
+
+#Tip
+/gate/boxsupOL1_SUP_180/daughters/name OL1_LEFTtipwedge3_180
+/gate/boxsupOL1_SUP_180/daughters/insert wedge
+/gate/OL1_LEFTtipwedge3_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/OL1_LEFTtipwedge3_180/geometry/setNarrowerXLength  176.1696513410976 mm
+/gate/OL1_LEFTtipwedge3_180/geometry/setXLength  176.3891300570471 mm
+/gate/OL1_LEFTtipwedge3_180/geometry/setYLength  1 mm
+/gate/OL1_LEFTtipwedge3_180/geometry/setZLength  2.72 mm
+/gate/OL1_LEFTtipwedge3_180/placement/setRotationAxis 0 0 1    
+/gate/OL1_LEFTtipwedge3_180/placement/setRotationAngle 180 deg
+/gate/OL1_LEFTtipwedge3_180/placement/setTranslation  1.860304650463817 -2.85 0.79 mm 
+/gate/OL1_LEFTtipwedge3_180/vis/setColor white
+/gate/OL1_LEFTtipwedge3_180/vis/forceSolid 1
+/gate/OL1_LEFTtipwedge3_180/vis/setVisible 1
+
+# 
+# - - - - - - - - - -1_OUTBOARD INFERIOR PART box- - - - - - - - - - - - - - - - 
+# 
+# 
+# 
+/gate/MLCbox/daughters/name OL1_INF180S
+/gate/MLCbox/daughters/insert box
+/gate/OL1_INF180S/setMaterial Air
+/gate/OL1_INF180S/placement/setTranslation -90.0 -15.44100694838450000000 -59 mm #y:-15.42100694838450000000  z:-58.4854084713292 mm
+/gate/OL1_INF180S/geometry/setXLength 180.0 mm
+/gate/OL1_INF180S/geometry/setYLength 32.2 mm
+/gate/OL1_INF180S/geometry/setZLength 3.9 mm
+/gate/OL1_INF180S/placement/setRotationAxis 1 0 0    
+/gate/OL1_INF180S/placement/setRotationAngle 5.010593138 deg
+#/gate/OL1_INF180S/placement/setRotationAngle 0.0 deg
+/gate/OL1_INF180S/vis/setColor white
+/gate/OL1_INF180S/vis/setVisible 0
+# 
+# 
+/gate/OL1_INF180S/daughters/name OL1_INF180
+/gate/OL1_INF180S/daughters/insert box
+/gate/OL1_INF180/setMaterial Air
+/gate/OL1_INF180/geometry/setXLength 180.0 mm
+/gate/OL1_INF180/geometry/setYLength 32.2 mm
+/gate/OL1_INF180/geometry/setZLength 3.9 mm
+/gate/OL1_INF180/vis/setColor white
+/gate/OL1_INF180/placement/setTranslation 0.0 0.0 0.0 mm 
+/gate/OL1_INF180/placement/setRotationAxis 0 1 0 
+/gate/OL1_INF180/placement/setRotationAngle 180 deg
+/gate/OL1_INF180/vis/setVisible 0
+# - - - - - - - - - -1_OUTBOARDINFERIOR PART FORMED AS A WEDGE- - - - - - - - - - - - - - - - - 
+# 
+# 
+/gate/OL1_INF180/daughters/name OL1_INF_LEFT_180
+/gate/OL1_INF180/daughters/insert wedge
+/gate/OL1_INF_LEFT_180/setMaterial AcceleratorCollimatorLeafMaterial
+
+
+/gate/OL1_INF_LEFT_180/geometry/setNarrowerXLength  20.0 mm
+#/gate/OL1_INF_LEFT_180/geometry/setXLength  156.24 mm
+/gate/OL1_INF_LEFT_180/geometry/setXLength  177.3683259109024 mm
+/gate/OL1_INF_LEFT_180/geometry/setYLength  28.9 mm
+/gate/OL1_INF_LEFT_180/geometry/setZLength  3.9 mm
+/gate/OL1_INF_LEFT_180/placement/setRotationAxis 0 1 0    
+/gate/OL1_INF_LEFT_180/placement/setRotationAngle 180 deg
+/gate/OL1_INF_LEFT_180/placement/setTranslation 40.657918522274393 1.65 0.0 mm 
+/gate/OL1_INF_LEFT_180/vis/setColor white
+/gate/OL1_INF_LEFT_180/vis/forceSolid 1
+/gate/OL1_INF_LEFT_180/vis/setVisible 1
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# - - - - - - - - - 1_OUTBOARD INFERIOR PART FORMED AS A PART OF A CYLINDER- - - - - - - - - - - 
+# 
+# 
+/gate/OL1_INF180/daughters/name OL1_round_inf_LEFT_180
+/gate/OL1_INF180/daughters/insert cylinder
+/gate/OL1_round_inf_LEFT_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/OL1_round_inf_LEFT_180/geometry/setRmin 0 mm
+/gate/OL1_round_inf_LEFT_180/geometry/setRmax 160 mm
+/gate/OL1_round_inf_LEFT_180/geometry/setHeight 3.9 mm
+/gate/OL1_round_inf_LEFT_180/geometry/setPhiStart 0  deg
+/gate/OL1_round_inf_LEFT_180/geometry/setDeltaPhi 10.406166395098792 deg
+/gate/OL1_round_inf_LEFT_180/placement/setTranslation 70.0 16.1 0.0 mm 
+/gate/OL1_round_inf_LEFT_180/placement/setRotationAxis 0 0 1
+/gate/OL1_round_inf_LEFT_180/placement/setRotationAngle 180 deg
+/gate/OL1_round_inf_LEFT_180/vis/setColor white
+/gate/OL1_round_inf_LEFT_180/vis/forceSolid 1
+/gate/OL1_round_inf_LEFT_180/vis/setVisible 1
+
+
+##tip_inf1
+
+/gate/OL1_INF180/daughters/name OL1_LEFTtipwedge_inf1_180
+/gate/OL1_INF180/daughters/insert wedge
+/gate/OL1_LEFTtipwedge_inf1_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/OL1_LEFTtipwedge_inf1_180/geometry/setNarrowerXLength  176.9681496355232 mm
+/gate/OL1_LEFTtipwedge_inf1_180/geometry/setXLength  177.3683259109024 mm
+/gate/OL1_LEFTtipwedge_inf1_180/geometry/setYLength  2.1 mm
+/gate/OL1_LEFTtipwedge_inf1_180/geometry/setZLength  2.25 mm
+/gate/OL1_LEFTtipwedge_inf1_180/placement/setRotationAxis 0 0 1    
+/gate/OL1_LEFTtipwedge_inf1_180/placement/setRotationAngle 180 deg
+/gate/OL1_LEFTtipwedge_inf1_180/placement/setTranslation 1.415881113393610 -13.85 -0.825 mm 
+/gate/OL1_LEFTtipwedge_inf1_180/vis/setColor white
+/gate/OL1_LEFTtipwedge_inf1_180/vis/forceSolid 1
+/gate/OL1_LEFTtipwedge_inf1_180/vis/setVisible 1
+
+
+##tip_inf2
+
+/gate/OL1_INF180/daughters/name OL1_LEFTtipwedge_inf2_180
+/gate/OL1_INF180/daughters/insert wedge
+/gate/OL1_LEFTtipwedge_inf2_180/setMaterial AcceleratorCollimatorLeafMaterial
+/gate/OL1_LEFTtipwedge_inf2_180/geometry/setNarrowerXLength  176.7263857810803 mm
+/gate/OL1_LEFTtipwedge_inf2_180/geometry/setXLength  176.9681496355232 mm
+/gate/OL1_LEFTtipwedge_inf2_180/geometry/setYLength  1.2 mm
+/gate/OL1_LEFTtipwedge_inf2_180/geometry/setZLength  1.05 mm
+/gate/OL1_LEFTtipwedge_inf2_180/placement/setRotationAxis 0 0 1    
+/gate/OL1_LEFTtipwedge_inf2_180/placement/setRotationAngle 180 deg
+/gate/OL1_LEFTtipwedge_inf2_180/placement/setTranslation 1.576366145849136 -15.5 -1.425 mm 
+/gate/OL1_LEFTtipwedge_inf2_180/vis/setColor white
+/gate/OL1_LEFTtipwedge_inf2_180/vis/forceSolid 1
+/gate/OL1_LEFTtipwedge_inf2_180/vis/setVisible 1
+
+
+
+
+
+
+
+
+
+
+
