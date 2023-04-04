@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# This bash script is used to set the number of particle for "patient" (second) simulation part
+# from the number of particle in reduced phase space and according to recycling
+
+number_of_simulation=$(ls -1 the_dir/phsp/output/ | wc -l)
+
+for i in `seq 0 $((number_of_simulation-1))`;
+do
+    a=$(sed -n '/$PARTICLES:/{n;p;}'  the_dir/phsp/output/$i/myIAEA.IAEAheader)
+    nb=$((a*ReCyCl))
+    sed -i -e "s/NB_PRIM/$nb/g" the_dir/clinic/mac/$i/main.mac
+done
+
+
+         

@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH -J job_name_tag
+#SBATCH -o job_name_tag.%j.out
+#SBATCH -e job_name_tag.%j.err
+#SBATCH -N n_node_tag
+#SBATCH -n n_core_tag
+#SBATCH --ntasks-per-core=1
+#SBATCH --time=time_tag:30:00
+
+#SBATCH --mail-user=jeremy.leste@inserm.fr
+#SBATCH --mail-type=ALL
+
+module purge
+module load openmpi/gnu/2.0.2.10 chdb/1.0-ompi
+
+##rsync /gpfs/work/p19001/leste/phsp/{phsp}* /tmpdir/{user}/phsp
+
+## TOTAL NUMBER OF PRIMARIES USED FOR THIS SIMULATION -> tot_part_tag
+
+srun chdb --in-dir /tmpdir/user_tag/input/job_name_tag/clinic/mac --in-type mac --out-dir /tmpdir/user_tag/input/job_name_tag/job_out_dir/output --out-files %out-dir%/%path% --sort-by-size --command "Gate -a [out,%out-dir%/%dirname%] %in-dir%/%path%" --report report.txt --sleep 2
+
+infoincidentjob
+

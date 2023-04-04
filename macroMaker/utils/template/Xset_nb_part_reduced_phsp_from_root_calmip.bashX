@@ -1,0 +1,36 @@
+#!/bin/bash
+
+ 
+
+# load python module for calmip
+
+module purge
+
+module load python/3.6.8
+
+
+
+#number_of_simulation=$(ls -1 the_dir/phsp/output/ | wc -l)
+number_of_simulation=Nsimu
+
+
+#execute script for set number of particule
+
+echo 'reading root phsp file...'
+
+python3 read_root.py the_dir ReCyCl
+
+echo 'writting in main.mac ...'
+
+for i in `seq 0 $((number_of_simulation-1))`;
+
+do
+	
+    a=$(sed -n $((i+1))'p'  p.dat)
+    sed -i -e "s/NB_PRIM/$a/g" the_dir/clinic/mac/$i/main.mac
+
+done
+
+rm p.dat
+
+echo 'done'
